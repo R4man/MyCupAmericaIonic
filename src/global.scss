@@ -1,11 +1,140 @@
 // http://ionicframework.com/docs/theming/
-@import '~@ionic/angular/css/core.css';
-@import '~@ionic/angular/css/normalize.css';
-@import '~@ionic/angular/css/structure.css';
-@import '~@ionic/angular/css/typography.css';
-@import '~@ionic/angular/css/display.css';
-@import '~@ionic/angular/css/padding.css';
-@import '~@ionic/angular/css/float-elements.css';
-@import '~@ionic/angular/css/text-alignment.css';
-@import '~@ionic/angular/css/text-transformation.css';
-@import '~@ionic/angular/css/flex-utils.css';
+@import "~@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+.cor-if-verde {
+  --background: #00420c;
+  --background-activated: rgb(0, 41, 7);
+}
+
+.cor-azul-forte {
+  --background: #061b8e;
+}
+
+.cor-verde-musgo {
+  background-color: #0a8600;
+}
+
+.cor-amarelo-claro {
+  background-color: #ffff00;
+}
+
+.cor-quase-branco {
+  background-color: #ffffe3;
+}
+
+.cor-azul-fraco {
+  background-color: #dbffff;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.h-50p {
+  height: 50px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-8p {
+  width: 8px;
+}
+
+.w-50p {
+  width: 50px;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.display-wrap {
+  flex-wrap: wrap;
+}
+
+.alinha-centro {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alinha-base {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.alinha-topo {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.alinha-esquerda {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.alinha-direita {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.tamanho-texto-caixa-de-texto {
+  font-size: 40px;
+  width: 250px;
+  text-align: center;
+}
+
+.p-20p {
+  padding: 20px;
+}
+
+.tamanho-texto10p {
+  font-size: 10px;
+}
+
+.m-3 {
+  margin: 3%;
+}
+
+.m-15p {
+  margin: 15px;
+}
+
+.m-0 {
+  margin: 0px;
+}
