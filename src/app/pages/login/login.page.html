@@ -1,5 +1,30 @@
-<div>
-
-AAAAAAAAAAAAAAA
-
+<div class="h-100">
+    <div class="display-wrap display-flex h-100">
+        <div class=" alinha-topo w-100">
+            <ion-row>
+                <ion-col>
+                    <input autocomplete="off" type="text" aria-label=""
+                         placeholder="Login" name="login" [(ngModel)]="login">
+                    <input autocomplete="off" type="text" aria-label=""
+                         placeholder="Senha" name="senha" [(ngModel)]="senha">
+                    <div>
+                        <ion-button expand="" fill="solid" size="default" mode="md"
+                         (click)=""> Enviar
+                        </ion-button>
+                    </div>
+                    <ion-button expand="" fill="solid" size="default" mode="md"
+                         (click)=""> Esqueci o nickmane ou senha
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-button expand="" fill="solid" size="default" mode="md"
+                         (click)=""> Novo aqui
+                </ion-button>
+                <ion-button expand="" fill="solid" size="default" mode="md"
+                         (click)=""> Sobre
+                </ion-button>
+            </ion-row>
+        </div>
+    </div>
 </div>
