@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { BaseService } from 'src/app/base.service';
 
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.page.html',
   styleUrls: ['./cadastro.page.scss'],
 })
-export class CadastroPage implements OnInit {
+export class CadastroPage {
 
-  constructor() { }
+  constructor(private baseService: BaseService) { }
 
-  ngOnInit() {
+  ionViewDidEnter() {
+    this.baseService.loading = false;
   }
-
 }
