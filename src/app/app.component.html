@@ -1,4 +1,9 @@
 <ion-app>
+  <div *ngIf="baseService.loading" class="container-carregando">
+    <div class="inner">Carregando...</div>
+  </div>
+
+
   <ion-header>
     <ion-toolbar class="cor-azul-forte">
       <ion-row class="m-0">
