@@ -1,34 +1,49 @@
-<div class="h-100">
-    <div class="display-wrap display-flex h-100">
-        <div class=" alinha-topo w-100">
-            <ion-row>
-                <input autocomplete="off" type="text" aria-label="" placeholder="Login" name="login"
-                    [(ngModel)]="login">
-            </ion-row>
-            <ion-row>
-                <input autocomplete="off" type="text" aria-label="" placeholder="Senha" name="senha"
-                    [(ngModel)]="senha">
-            </ion-row>
-            <ion-row>
-                <div>
-                    <ion-button expand="" fill="solid" size="default" mode="md" (click)=""> Enviar
+<div class="h-100 w-100">
+    <div class="display-wrap display-flex">
+        <div class="alinha-topo w-100">
+            <h1 class="card-text caixa-texto">Oláaaaaaaaaaaaaaa</h1>
+        </div>
+        <div class="w-100">
+            <div>
+                <ion-row size="3">
+                    <ion-col class="alinha-meio">
+                        <div class="h-100 w-100">
+                            <input class="alinha-meio" autocomplete="off" type="text" aria-label="" placeholder="Login"
+                                name="login" [(ngModel)]="login">
+                        </div>
+                        <div class="h-100 w-100">
+                            <input autocomplete="off" type="text" aria-label="" placeholder="Senha" name="senha"
+                                [(ngModel)]="senha">
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <div>
+                <ion-row size="3">
+                    <ion-button expand="" fill="solid" size="default" mode="md" (click)="clicou()"> Enviar
                     </ion-button>
-                </div>
-            </ion-row>
-            <ion-row>
-                <ion-button expand="" fill="solid" size="default" mode="md" (click)=""> Esqueci o nickmane ou senha
-                </ion-button>
-            </ion-row>
-            <ion-row>
-                <ion-col>
-                    <ion-button expand="" fill="solid" size="default" mode="md" (click)=""> Novo aqui
+                </ion-row>
+            </div>
+            <div>
+                <ion-row size="3">
+                    <ion-button expand="" fill="solid" size="default" mode="md" (click)="clicou()"> Esqueci o nickmane
+                        ou
+                        senha
                     </ion-button>
-                </ion-col>
-                <ion-col>
-                    <ion-button expand="" fill="solid" size="default" mode="md" (click)=""> Sobre
-                    </ion-button>
-                </ion-col>
-            </ion-row>
+                </ion-row>
+            </div>
+            <div>
+                <ion-row size="3">
+                    <ion-col>
+                        <ion-button expand="" fill="solid" size="default" mode="md" (click)="clicou()"> Novo aqui
+                        </ion-button>
+                    </ion-col>
+                    <ion-col>
+                        <ion-button expand="" fill="solid" size="default" mode="md" (click)="clicou()"> Sobre
+                        </ion-button>
+                    </ion-col>
+                </ion-row>
+            </div>
         </div>
     </div>
 </div>
