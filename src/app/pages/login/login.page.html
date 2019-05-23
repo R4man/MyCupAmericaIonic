@@ -6,41 +6,64 @@
         <div class="w-100">
             <div>
                 <ion-row size="3">
-                    <ion-col class="alinha-meio">
-                        <div class="h-100 w-100">
-                            <input class="alinha-meio" autocomplete="off" type="text" aria-label="" placeholder="Login"
-                                name="login" [(ngModel)]="login">
+                    <ion-col class="alinha-meio" style="flex-direction: column">
+                        <div class="h-100 w-100 alinha-meio m-3p">
+                            <input autocomplete="off" type="text" aria-label="" placeholder="Login">
                         </div>
-                        <div class="h-100 w-100">
-                            <input autocomplete="off" type="text" aria-label="" placeholder="Senha" name="senha"
-                                [(ngModel)]="senha">
+                        <div class="h-100 w-100 alinha-meio m-3p">
+                            <input autocomplete="off" type="text" aria-label="" placeholder="Senha" name="senha">
                         </div>
                     </ion-col>
                 </ion-row>
             </div>
             <div>
                 <ion-row size="3">
-                    <ion-button expand="" fill="solid" size="default" mode="md" (click)="clicou()"> Enviar
-                    </ion-button>
-                </ion-row>
-            </div>
-            <div>
-                <ion-row size="3">
-                    <ion-button expand="" fill="solid" size="default" mode="md" (click)="clicou()"> Esqueci o nickmane
-                        ou
-                        senha
-                    </ion-button>
-                </ion-row>
-            </div>
-            <div>
-                <ion-row size="3">
-                    <ion-col>
-                        <ion-button expand="" fill="solid" size="default" mode="md" (click)="clicou()"> Novo aqui
+                    <ion-col class="alinha-centro">
+                        <ion-button expand="" fill="solid" size="default" mode="md" (click)="clicou()"> Enviar
                         </ion-button>
                     </ion-col>
-                    <ion-col>
-                        <ion-button expand="" fill="solid" size="default" mode="md" (click)="clicou()"> Sobre
+                </ion-row>
+            </div>
+            <div>
+                <ion-row size="3">
+                    <ion-col class="alinha-base">
+                        <ion-button expand="" fill="clear" size="default" mode="md" (click)="clicou()"> Esqueci o
+                            nickmane
+                            ou
+                            senha
                         </ion-button>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <div>
+                <ion-row size="3">
+                    <ion-col class="alinha-direita">
+                        <a href="/">
+                            <ion-card class="w-100">
+                                <ion-card-header class="alinha-meio">
+                                    <font color="black"><i class="fas fa-user-plus" style="font-size: 400%;"></i></font>
+                                </ion-card-header>
+                                <ion-card-content>
+                                    <ion-button expand="full" fill="clear" mode="md" (click)="clicou()"> Novo
+                                        aqui
+                                    </ion-button>
+                                </ion-card-content>
+                            </ion-card>
+                        </a>
+                    </ion-col>
+                    <ion-col class="alinha-esquerda">
+                        <a href="/">
+                            <ion-card class="w-100">
+                                <ion-card-header class="alinha-meio">
+                                    <font color="black"><i class="fas fa-info-circle"></i>
+                                    </font>
+                                </ion-card-header>
+                                <ion-card-content>
+                                    <ion-button expand="full" fill="clear" mode="md"> Sobre
+                                    </ion-button>
+                                </ion-card-content>
+                            </ion-card>
+                        </a>
                     </ion-col>
                 </ion-row>
             </div>
