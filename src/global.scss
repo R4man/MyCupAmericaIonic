@@ -125,6 +125,15 @@
   align-items: center;
 }
 
+.alinha-meio {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  text-align: center;
+}
+
 .tamanho-texto-caixa-de-texto {
   font-size: 40px;
   width: 250px;
