@@ -1,0 +1,51 @@
+ select{
+    float: center;
+    width: 90%;
+    padding: 9px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: groove;
+    background: #ffffff;  
+}
+
+input[type=submit] {
+    background-color: #061b8e;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+    opacity: 0.9;
+  }
+    
+p {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: groove;
+    background: #f1f1f1;
+    text-align: center;
+  }
+  
+input[type=text], input[type=password], input[type=date], input[type=number]{
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: groove;
+    background: #ffffff;
+  }
+
+div{
+    text-align: center;
+}
+
+#municipio{
+    width: 45%;
+}
+
+#estado{
+    width: 45%;
+}
