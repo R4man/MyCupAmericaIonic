@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { DataJogosPage } from './data-jogos.page';
+import { ModalApostaPage } from '../modal-aposta/modal-aposta.page';
 
 const routes: Routes = [
   {
@@ -19,8 +20,10 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
   ],
-  declarations: [DataJogosPage]
+  declarations: [DataJogosPage, ModalApostaPage],
+  entryComponents: [ModalApostaPage],
+  exports: [DataJogosPage]
 })
-export class DataJogosPageModule {}
+export class DataJogosPageModule { }

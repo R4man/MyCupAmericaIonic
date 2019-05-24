@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BaseService } from 'src/app/base.service';
 import { ModalController } from '@ionic/angular';
+import { ModalApostaPage } from '../modal-aposta/modal-aposta.page';
 
 @Component({
   selector: 'app-data-jogos',
@@ -9,10 +10,11 @@ import { ModalController } from '@ionic/angular';
 })
 export class DataJogosPage implements OnInit {
 
-  jogos: 5;
+  jogo: string;
   dataSelecionada: string;
 
-  constructor(private baseService: BaseService, private modalapostaController: ModalController) {
+  constructor(public baseService: BaseService,
+              private modalapostaController: ModalController) {
 
   }
 
@@ -31,7 +33,9 @@ export class DataJogosPage implements OnInit {
     }
   }
 
-  async openModalAposta() {
+  async openModalAposta(jogo: string) {
+    this.jogo = jogo;
+    console.log(this.jogo);
     const modal = await this.modalapostaController.create({
       component: ModalApostaPage,
       componentProps: {

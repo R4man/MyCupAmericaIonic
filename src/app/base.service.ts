@@ -7,4 +7,5 @@ export class BaseService {
     header = false;
     dataAtual = new Date().toISOString();
     caminhoImagemPadrao = '../assets/img/';
+    jogo2 = true;
 }
