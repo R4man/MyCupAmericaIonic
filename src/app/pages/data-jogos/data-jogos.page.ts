@@ -9,6 +9,7 @@ import { BaseService } from 'src/app/base.service';
 export class DataJogosPage implements OnInit {
 
    jogos: 5;
+   dataSelecionada: string;
 
   constructor(private baseService: BaseService) {
 
@@ -19,6 +20,10 @@ export class DataJogosPage implements OnInit {
 
   ionViewDidEnter() {
     this.baseService.loading = false;
+  }
+
+  clicou() {
+    console.log(this.dataSelecionada);
   }
 
 }
