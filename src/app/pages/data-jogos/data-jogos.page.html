@@ -3,28 +3,15 @@
     <ion-col class="w-23 h-100">
       <div id="botao-voltar-data" class="">
         <ion-button expand="full" fill="clean" mode="md">
-          <i href="/" class="fas fa-backward"></i>
+          <i href="/" class="fas fa-backward" (click)="clicou()"></i>
         </ion-button>
       </div>
     </ion-col>
     <ion-col class="w-54 h-100">
-      <ion-row class="h-100 w-100">
-        <div id="data1" class="w-33 h-100">
-          <ion-button expand="full" fill="clean" mode="md">
-            Qua 05/07
-          </ion-button>
-        </div>
-        <div id="data2" class="w-33 h-100">
-          <ion-button expand="full" fill="clean" mode="md">
-            [Sex 07/06]
-          </ion-button>
-        </div>
-        <div id="data3" class="w-33 h-100">
-          <ion-button expand="full" fill="clean" mode="md">
-            Dom 09/06
-          </ion-button>
-        </div>
-      </ion-row>
+      <div id="data" class="w-100 h-100">
+        <ion-datetime monthValues="6,7,8" placeholder="Selecione a data" [(ngModel)]="dataSelecionada"
+          dayValues="01,02,03,04,05,06,08,09,10, 11, 12, 13, 14" displayFormat="DD/MMM"></ion-datetime>
+      </div>
     </ion-col>
     <ion-col class="w-23 h-100">
       <div id="botao-avancar-data" class="">
