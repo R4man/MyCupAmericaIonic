@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-modal-aposta',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalApostaPage implements OnInit {
 
-  constructor() { }
+  constructor(private ModalApostaController: ModalController) { }
 
   ngOnInit() {
+  }
+
+  apostar() {
+    this.ModalApostaController.dismiss();
+  }
+
+  cancelar() {
+    this.ModalApostaController.dismiss();
   }
 
 }

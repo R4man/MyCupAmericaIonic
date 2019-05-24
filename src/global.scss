@@ -47,8 +47,32 @@
   background-color: #dbffff;
 }
 
+.h-10 {
+  height: 10%;
+}
+
+.h-20 {
+  height: 20%;
+}
+
+.h-30 {
+  height: 30%;
+}
+
+.h-33 {
+  height: 33.33%;
+}
+
 .h-50 {
   height: 50%;
+}
+
+.h-60{
+  height: 60%;
+}
+
+.h-70 {
+  height: 70%;
 }
 
 .h-80 {
@@ -63,20 +87,8 @@
   height: 100%;
 }
 
-.h-33 {
-  height: 33.33%;
-}
-
 .h-50p {
   height: 50px;
-}
-
-.h-30 {
-  height: 30%;
-}
-
-.h-20 {
-  height: 20%;
 }
 
 .w-10 {
@@ -215,6 +227,10 @@
 
 .p-20p {
   padding: 20px;
+}
+
+.p-2{
+  padding: 2%;
 }
 
 .tamanho-texto10p {
