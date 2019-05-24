@@ -8,6 +8,8 @@ import { BaseService } from 'src/app/base.service';
 })
 export class DataJogosPage implements OnInit {
 
+   jogos: 5;
+
   constructor(private baseService: BaseService) {
 
    }
