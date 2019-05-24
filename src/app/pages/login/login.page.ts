@@ -16,7 +16,7 @@ export class LoginPage {
   }
 
   clicou() {
-    console.log('clicou');
+    console.log(this.baseService.dataAtual);
 
   }
 

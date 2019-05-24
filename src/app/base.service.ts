@@ -5,4 +5,5 @@ export class BaseService {
     showBackButton = false;
     loading = true;
     header = false;
+    dataAtual = new Date().toISOString();
 }
