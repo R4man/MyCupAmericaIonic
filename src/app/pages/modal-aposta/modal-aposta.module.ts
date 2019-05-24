@@ -2,13 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+
 import { IonicModule } from '@ionic/angular';
-import { ModalMatriculaPage } from './modal-matricula.page';
+
+import { ModalApostaPage } from './modal-aposta.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: ModalMatriculaPage
+    component: ModalApostaPage
   }
 ];
 
@@ -19,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ModalMatriculaPage],
+  declarations: [ModalApostaPage]
 })
-export class ModalMatriculaPageModule { }
+export class ModalApostaPageModule {}

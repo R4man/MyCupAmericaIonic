@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BaseService } from 'src/app/base.service';
 import { ModalController } from '@ionic/angular';
-import { ModalMatriculaPage } from '../modal-matricula/modal-matricula.page';
+import { ModalMatriculaPage } from '../modal-aposta/modal-matricula.page';
 
 @Component({
   selector: 'app-login',
