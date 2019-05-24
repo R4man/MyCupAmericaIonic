@@ -51,12 +51,28 @@
   height: 100%;
 }
 
+.h-90 {
+  height: 90%;
+}
+
+.h-33 {
+  height: 33.33%;
+}
+
 .h-50p {
   height: 50px;
 }
 
 .w-100 {
   width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-30 {
+  width: 30%;
 }
 
 .w-8p {
@@ -189,15 +205,4 @@
   width: 100%;
   justify-items: center;
   align-content: center;
-}
-
-@media only screen and (max-width: 768px){
-  i{
-    font-size: 20%;
-  }
-}
-@media only screen and (min-width: 768px){
-  i{
-    font-size: 40%;
-  }
 }

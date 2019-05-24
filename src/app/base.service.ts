@@ -4,4 +4,5 @@ import { Injectable } from '@angular/core';
 export class BaseService {
     showBackButton = false;
     loading = true;
+    header = false;
 }
