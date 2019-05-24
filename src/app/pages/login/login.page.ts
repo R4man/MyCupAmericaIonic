@@ -17,7 +17,6 @@ export class LoginPage {
 
   clicou() {
     console.log(this.baseService.dataAtual);
-
   }
 
   async openModalMatricula() {

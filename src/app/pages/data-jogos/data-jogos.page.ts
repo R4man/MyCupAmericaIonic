@@ -8,12 +8,15 @@ import { BaseService } from 'src/app/base.service';
 })
 export class DataJogosPage implements OnInit {
 
-   jogos: 5;
-   dataSelecionada: string;
+  jogos: 5;
+  dataSelecionada: string;
 
   constructor(private baseService: BaseService) {
 
-   }
+  }
+
+
+
 
   ngOnInit() {
   }
@@ -23,7 +26,11 @@ export class DataJogosPage implements OnInit {
   }
 
   clicou() {
-    console.log(this.dataSelecionada);
+    if (this.dataSelecionada) {
+      console.log(this.dataSelecionada);
+    } else {
+      console.log('ta vazio');
+    }
   }
 
 }

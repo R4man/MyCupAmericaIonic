@@ -6,4 +6,5 @@ export class BaseService {
     loading = true;
     header = false;
     dataAtual = new Date().toISOString();
+    caminhoImagemPadrao = '../assets/img/';
 }
