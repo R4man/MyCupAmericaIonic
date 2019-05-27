@@ -1,30 +1,65 @@
-<div class="h-100">
-    <div class="display-wrap display-flex h-100">
-        <div class=" alinha-topo w-100">
-            <ion-row>
-                <ion-col>
-                    <input autocomplete="off" type="text" aria-label=""
-                         placeholder="Login" name="login">
-                    <input autocomplete="off" type="text" aria-label=""
-                         placeholder="Senha" name="senha">
-                    <div>
-                        <ion-button expand="" fill="solid" size="default" mode="md"
-                         (click)="clicou()"> Enviar
-                        </ion-button>
-                    </div>
-                    <ion-button expand="" fill="solid" size="default" mode="md"
-                         (click)="clicou()"> Esqueci o nickmane ou senha
-                    </ion-button>
-                </ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-button expand="" fill="solid" size="default" mode="md"
-                         (click)="clicou()"> Novo aqui
+<div class="h-33 w-100">
+    <h1 class="card-text caixa-texto alinha-centro">Oláaaaaaaaaaaaaaa</h1>
+    <ion-row size="3">
+        <ion-col class="alinha-meio" class="m-1" style="flex-direction: column">
+            <div class="h-100 w-100 alinha-meio">
+                <input autocomplete="off" type="text" aria-label="" class="alinha-meio" placeholder="Login">
+            </div>
+            <div class="h-100 w-100 alinha-meio">
+                <input autocomplete="off" type="text" aria-label="" class="alinha-meio" placeholder="Senha" name="senha">
+            </div>
+        </ion-col>
+    </ion-row>
+</div>
+
+<div class="h-33 w-100">
+    <div>
+        <ion-row size="3">
+            <ion-col class="alinha-centro">
+                <ion-button expand="" fill="solid" size="default" mode="md" (click)="clicou()"> Enviar
                 </ion-button>
-                <ion-button expand="" fill="solid" size="default" mode="md"
-                         (click)="clicou()"> Sobre
-                </ion-button>
-            </ion-row>
-        </div>
+            </ion-col>
+        </ion-row>
     </div>
+    <div>
+        <ion-row size="3">
+            <ion-col class="alinha-base">
+                <ion-button expand="" fill="clear" size="default" mode="md" (click)="clicou()"> Esqueci o
+                    nickmane
+                    ou
+                    senha
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </div>
+</div>
+
+<div class="h-33 w-100">
+    <ion-row size="3" style="text-align: -webkit-center;">
+        <div class="w-50">
+            <a href="/cadastro">
+                <ion-card class="w-90 h-90">
+                    <ion-card-header class="alinha-meio">
+                        <font color="black"><i class="fas fa-user-plus" style="font-size: 400%;"></i></font>
+                    </ion-card-header>
+                    <ion-card-content class="ion-card-content">
+                        Novo aqui
+                    </ion-card-content>
+                </ion-card>
+            </a>
+        </div>
+        <div class="w-50">
+            <a href="/data-jogos">
+                <ion-card class="w-90 h-90">
+                    <ion-card-header class="alinha-meio">
+                        <font color="black"><i class="fas fa-info-circle" style="font-size: 400%;"></i>
+                        </font>
+                    </ion-card-header>
+                    <ion-card-content class="ion-card-content">
+                        Sobre
+                    </ion-card-content>
+                </ion-card>
+            </a>
+        </div>
+    </ion-row>
 </div>

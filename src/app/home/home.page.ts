@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BaseService } from '../base.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,12 @@ import { BaseService } from '../base.service';
 })
 export class HomePage {
 
-  constructor(private baseService: BaseService) {
+  constructor(private baseService: BaseService,
+              private nav: NavController) {
+  }
+
+  clicou() {
+    this.nav.navigateForward('/login');
   }
 
 

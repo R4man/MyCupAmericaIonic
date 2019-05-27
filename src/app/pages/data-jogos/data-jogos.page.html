@@ -1,0 +1,64 @@
+<div class="h-20 alinha-centro" >
+  <ion-row class="w-100 alinha-meio">
+    <ion-col class="w-23 h-100">
+      <div id="botao-voltar-data" class="">
+        <ion-button expand="full" fill="clean" mode="md">
+          <i href="/" class="fas fa-backward" (click)="clicou()"></i>
+        </ion-button>
+      </div>
+    </ion-col>
+    <ion-col class="w-54 h-100">
+      <div id="data" class="w-100 h-100">
+        <ion-datetime monthValues="5,6,7" placeholder="Selecione a data" [(ngModel)]="dataSelecionada"
+          dayValues="01,02,03,04,05,06,08,09,10, 11, 12, 13, 14" displayFormat="DD/MMM"></ion-datetime>
+      </div>
+    </ion-col>
+    <ion-col class="w-23 h-100">
+      <div id="botao-avancar-data" class="">
+        <ion-button expand="full" fill="clean" mode="md" routerLink="/">
+          <i class="fas fa-forward"></i>
+        </ion-button>
+      </div>
+    </ion-col>
+  </ion-row>
+</div>
+<div class="h-30">
+  <a (click)="openModalAposta(1)">
+    <ion-row name="bandeiras" class="alinha-meio m-3">
+      <div name="bandeira1" class="w-40 alinha-meio">
+        <ion-img class="h-50p w-50p m-0" src="../assets/img/band150x150sigla/arg.png"></ion-img>
+      </div>
+      <div class="w-20 alinha-centro">
+        X
+      </div>
+      <div name="bandeira2" class="w-40 alinha-meio">
+        <ion-img class="h-50p w-50p m-0" src="../assets/img/band150x150sigla/bra.png"></ion-img>
+      </div>
+    </ion-row>
+    <ion-row name="data-jogo" class="alinha-meio m-3">
+      <div name="hora-local">
+        HH:MM - Estádio - Local
+      </div>
+    </ion-row>
+  </a>
+</div>
+<div class="h-50">
+    <a (click)="openModalAposta(2)"  *ngIf="baseService.jogo2">
+        <ion-row name="bandeiras" class="alinha-meio m-3">
+          <div name="bandeira1" class="w-40 alinha-meio">
+            <ion-img class="h-50p w-50p m-0" src="../assets/img/band150x150sigla/arg.png"></ion-img>
+          </div>
+          <div class="w-20 alinha-centro">
+            X
+          </div>
+          <div name="bandeira2" class="w-40 alinha-meio">
+            <ion-img class="h-50p w-50p m-0" src="../assets/img/band150x150sigla/bra.png"></ion-img>
+          </div>
+        </ion-row>
+        <ion-row name="data-jogo" class="alinha-meio m-3">
+          <div name="hora-local">
+            HH:MM - Estádio - Local
+          </div>
+        </ion-row>
+      </a>
+</div>

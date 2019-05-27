@@ -4,19 +4,34 @@
   </div>
 
 
-  <ion-header>
+  <ion-header *ngIf="baseService.header">
     <ion-toolbar class="cor-azul-forte">
       <ion-row class="m-0">
-        <ion-col size="3" class="alinha-direita">
-          <ion-img class="h-50p w-50p alinha-esquerda m-0" src="../assets/img/logo.jpeg"></ion-img>
-        </ion-col>
-        <ion-col size="6" class="alinha-centro m-0">
-          <h1 class="m-0">
-            <i><font color="white">My Cup América</font></i>
-          </h1>
-        </ion-col>
-        <ion-col size="3" class="alinha-esquerda m-0">
-        </ion-col>
+        <div class="w-20 h-100">
+           <div *ngIf="false" class="w-20">
+            <a class="fas fa-bars"></a>
+          </div>
+          <div *ngIf="false" class="w-20">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+        </div>
+        <div class="w-60 h-100">
+          <ion-row>
+            <div class="w-10">
+              <ion-img class="h-50p w-50p m-0" src="../assets/img/logo.jpeg"></ion-img>
+            </div>
+            <div class="w-80">
+              <h1 class="m-0 w-100 tamanho-texto20p alinha-direita alinha-meio">
+                <font color="white">My Cup América</font>
+              </h1>
+            </div>
+          </ion-row>
+        </div>
+        <div class="w-20 h-100">
+          <div *ngIf="false" class="w-20">
+            <a class="fas fa-user"></a>
+          </div>
+        </div>
       </ion-row>
     </ion-toolbar>
   </ion-header>
