@@ -1,0 +1,20 @@
+Cadastrar: nome, senha, nickname, email, pais, estado, cidade, sexo, idade, icone : 
+avisar pra olhar email pra confirmar cadastro
+*reCeber 200 significa usuario cadastrado com sucesso;
+*receber mais de um usuario pro mesmo nickname vai retornar erro 400;
+
+login: nickname, senha: nome, saldo; 
+caso não cadastrado ou senha ou login errado 404
+
+esqueciSenha: nickname: 200=true 404=not found;
+esqueciNickname: email: 200=true 404=not found;
+
+aposta: jogo, usuario, valor aposta, gols1 e gols2; 200=true 404=not found jogador 404=not found jogo, 400 = n tem dinheiro ou data limite estourada;
+
+ConsultarJogo: data, jogo=null :data do jogo, selecao1 e 2, apostagols1 e 2, valorapostado;
+
+
+
+
+
+
