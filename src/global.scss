@@ -22,6 +22,9 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+//Google fonts
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
 .cor-if-verde {
   --background: #00420c;
   --background-activated: rgb(0, 41, 7);
@@ -320,4 +323,12 @@ a {
 .ion-card-content {
   display: inline;
   position: relative;
+}
+
+#header-title{
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  font-size: 20px;
+  height: 50px;
+  margin: 0;
 }

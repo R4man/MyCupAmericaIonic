@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class BaseService {
     showBackButton = false;
     loading = true;
-    header = false;
+    header = true;
     dataAtual = new Date().toISOString();
     caminhoImagemPadrao = '../assets/img/';
     jogo2 = true;

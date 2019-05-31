@@ -1,5 +1,7 @@
 {
   "name": "MyCupAmerica",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
