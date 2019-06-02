@@ -5,14 +5,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import * as cadastroPage from './cadastro.page';
-import { HttpClientModule } from '@angular/common/http';
+import { AlzheimerPage } from './alzheimer.page';
 import { ModalAvisoPage } from '../modal-aviso/modal-aviso.page';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
     path: '',
-    component: cadastroPage.CadastroPage
+    component: AlzheimerPage
   }
 ];
 
@@ -24,7 +24,7 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     HttpClientModule,
   ],
-  declarations: [cadastroPage.CadastroPage],
-  exports: [cadastroPage.CadastroPage]
+  declarations: [AlzheimerPage],
+  exports: [AlzheimerPage]
 })
-export class CadastroPageModule {}
+export class AlzheimerPageModule {}

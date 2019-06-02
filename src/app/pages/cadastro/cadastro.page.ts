@@ -53,24 +53,34 @@ export class CadastroPage {
       });
   }
 
+  async openModalAviso() {
+    if (this.senha === this.senha2) {
+// tslint:disable-next-line: max-line-length
+      this.baseService.aviso = 'Um e-mail de confirmação foi enviado, confira sua caixa de entrada e ative seu cadastro. Caso não receber em até 30 min. entre em contato com projetomycup@gmail.com';
+      this.cadastrar();
+    } else {
+      this.baseService.aviso = 'As senhas não coincidem. Tente novamente.';
+    }
+    const modal = await this.modalavisoController.create({
+      component: ModalAvisoPage,
+      cssClass: 'modal',
+      componentProps: {
+      }
+    });
+    return await modal.present();
+  }
+
   ionViewDidEnter() {
     this.baseService.loading = false;
   }
 
+  ionViewWillEnter() {
+    this.baseService.showBackButton = true;
+  }
 
-  async openModalAviso() {
-    if (this.senha === this.senha2) {
-      this.cadastrar();
-    } else {
-      this.baseService.aviso = 'As senhas não coincidem. Tente novamente.';
-      const modal = await this.modalavisoController.create({
-        component: ModalAvisoPage,
-        cssClass: 'modal',
-        componentProps: {
-        }
-      });
-      return await modal.present();
-    }
+  ionViewWillLeave() {
+    this.baseService.showBackButton = false;
+    this.baseService.loading = true;
   }
 }
 

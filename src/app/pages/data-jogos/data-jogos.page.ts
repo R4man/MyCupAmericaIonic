@@ -14,16 +14,14 @@ export class DataJogosPage implements OnInit {
   dataSelecionada: string;
 
   constructor(public baseService: BaseService,
-              private modalapostaController: ModalController) {
+    // tslint:disable-next-line: align
+    private modalapostaController: ModalController) {
 
   }
 
   ngOnInit() {
   }
 
-  ionViewDidEnter() {
-    this.baseService.loading = false;
-  }
 
   clicou() {
     if (this.dataSelecionada) {
@@ -42,6 +40,11 @@ export class DataJogosPage implements OnInit {
       }
     });
     return await modal.present();
+  }
+
+
+  ionViewDidEnter() {
+    this.baseService.loading = false;
   }
 
 }

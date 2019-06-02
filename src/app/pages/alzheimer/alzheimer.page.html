@@ -1,0 +1,20 @@
+<div class="w-100 h-50">
+  <div class="h-33">
+    <div class="alinha-base">
+      <a class="fas fa-user m-3" style="font-size: 250%;"></a>
+    </div>
+    <div class="alinha-base">
+      Esqueceu a porra da senha ou do nickname?
+    </div>
+    <div class="alinha-topo">
+      ENtão coloca a merda do email ai
+    </div>
+  </div>
+  <div class="h-33 alinha-centro">
+    <input autocomplete="off" type="text" aria-label="" class="alinha-meio" placeholder="E-mail cadastrado" name="email"
+      [(ngModel)]="email">
+  </div>
+  <div class="h-33">
+    <ion-button expand="" fill="solid" size="default" mode="md" class="alinha-base m-3" (click)="openModalAviso()">Enviar</ion-button>
+  </div>
+</div>

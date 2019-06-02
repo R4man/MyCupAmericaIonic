@@ -2,10 +2,12 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class BaseService {
-    showBackButton = false;
     loading = true;
     home = true;
     header = true;
+    showUserButton = false;
+    showMenuButton = false;
+    showBackButton = false;
     aviso = 'null';
     caminhoImagemPadrao = '../assets/img/';
     jogo2 = true;

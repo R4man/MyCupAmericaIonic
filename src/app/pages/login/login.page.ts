@@ -11,8 +11,10 @@ import { HttpClient } from '@angular/common/http';
 export class LoginPage implements OnInit {
 
   constructor(public baseService: BaseService,
-              private httpClient: HttpClient,
-              private nav: NavController) {
+    // tslint:disable-next-line: align
+    private httpClient: HttpClient,
+    // tslint:disable-next-line: align
+    private nav: NavController) {
 
   }
   saudacoes: string;
@@ -37,18 +39,22 @@ export class LoginPage implements OnInit {
 
 
   ionViewWillEnter() {
-    if (new Date().getHours() < 12 && new Date().getHours() > 5) {
+    const hora = new Date().getHours();
+    if (hora < 12 && hora > 5) {
       this.saudacoes = 'Bom dia!';
-    } else if (new Date().getHours() > 12 && new Date().getHours() < 5) {
+    } else if (hora > 12) {
       this.saudacoes = 'Boa tarde!';
     } else {
       this.saudacoes = 'Boa noite!';
     }
   }
+
   ionViewDidEnter() {
-    this.baseService.header = true;
     this.baseService.home = false;
     this.baseService.loading = false;
   }
 
+  ionViewWillLeave() {
+    this.baseService.loading = true;
+  }
 }
