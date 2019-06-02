@@ -1,12 +1,14 @@
 <div class="h-33 w-100">
-    <h1 class="card-text caixa-texto alinha-centro">Oláaaaaaaaaaaaaaa</h1>
+    <h1 class="card-text caixa-texto alinha-centro">{{saudacoes}}</h1>
     <ion-row size="3">
         <ion-col class="alinha-meio" class="m-1" style="flex-direction: column">
             <div class="h-100 w-100 alinha-meio">
-                <input autocomplete="off" type="text" aria-label="" class="alinha-meio" placeholder="Login">
+                <input autocomplete="off" type="text" aria-label="" class="alinha-meio" placeholder="Login"
+                    [(ngModel)]="login">
             </div>
             <div class="h-100 w-100 alinha-meio">
-                <input autocomplete="off" type="text" aria-label="" class="alinha-meio" placeholder="Senha" name="senha">
+                <input autocomplete="off" type="text" aria-label="" class="alinha-meio" placeholder="Senha" name="senha"
+                    [(ngModel)]="senha">
             </div>
         </ion-col>
     </ion-row>
@@ -16,7 +18,7 @@
     <div>
         <ion-row size="3">
             <ion-col class="alinha-centro">
-                <ion-button expand="" fill="solid" size="default" mode="md" (click)="clicou()"> Enviar
+                <ion-button expand="" fill="solid" size="default" mode="md" (click)="enviar()"> Enviar
                 </ion-button>
             </ion-col>
         </ion-row>
@@ -24,7 +26,7 @@
     <div>
         <ion-row size="3">
             <ion-col class="alinha-base">
-                <ion-button expand="" fill="clear" size="default" mode="md" (click)="clicou()"> Esqueci o
+                <ion-button expand="" fill="clear" size="default" mode="md" (click)="enviar()"> Esqueci o
                     nickmane
                     ou
                     senha

@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 
 import * as cadastroPage from './cadastro.page';
 import { HttpClientModule } from '@angular/common/http';
+import { ModalAvisoPage } from '../modal-aviso/modal-aviso.page';
 
 const routes: Routes = [
   {
@@ -23,6 +24,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     HttpClientModule,
   ],
-  declarations: [cadastroPage.CadastroPage]
+  declarations: [cadastroPage.CadastroPage, ModalAvisoPage],
+  entryComponents: [ModalAvisoPage],
+  exports: [cadastroPage.CadastroPage]
 })
 export class CadastroPageModule {}

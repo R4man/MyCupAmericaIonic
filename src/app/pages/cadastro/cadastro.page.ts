@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { BaseService } from 'src/app/base.service';
 import { HttpClient } from '@angular/common/http';
-import { NavController } from '@ionic/angular';
+import { NavController, ModalController } from '@ionic/angular';
+import { ModalAvisoPage } from '../modal-aviso/modal-aviso.page';
 
 @Component({
   selector: 'app-cadastro',
@@ -14,7 +15,9 @@ export class CadastroPage {
     // tslint:disable-next-line: align
     private nav: NavController,
     // tslint:disable-next-line: align
-    private httpClient: HttpClient) { }
+    private httpClient: HttpClient,
+    // tslint:disable-next-line: align
+    private modalavisoController: ModalController) { }
 
   nome: string;
   nickname: string;
@@ -29,30 +32,45 @@ export class CadastroPage {
 
 
   cadastrar() {
-    if (this.senha === this.senha2) {
-// tslint:disable-next-line: max-line-length
-      console.log(this.nome, this.nickname, this.email,
+    // tslint:disable-next-line: max-line-length
+    console.log(this.nome, this.nickname, this.email,
       this.pais, this.estado, this.sexo,
       this.idade, this.senha, this.cidade);
-      const url = this.baseService.baseURL + '/cadastro/';
-// tslint:disable-next-line: object-literal-key-quotes
-      this.httpClient.post<any>(url, { 'nome': this.nome, 'nickname': this.nickname, 'email': this.email,
-// tslint:disable-next-line: object-literal-key-quotes
-                                       'pais': this.pais, 'estado': this.estado, 'sexo': this.sexo,
-// tslint:disable-next-line: object-literal-key-quotes
-                                       'idade': this.idade, 'senha': this.senha, 'cidade': this.cidade }).subscribe(
-        (retorno: any) => {
-          console.log('deu certo');
-        }, (error: any) => {
-          this.nav.navigateForward('/login');
-        });
-    } else {
-      console.log('senha incopativeis');
-     }
+    const url = this.baseService.baseURL + '/cadastro/';
+    // tslint:disable-next-line: object-literal-key-quotes
+    this.httpClient.post<any>(url, {
+      // tslint:disable-next-line: object-literal-key-quotes
+      'nome': this.nome, 'nickname': this.nickname, 'email': this.email,
+      // tslint:disable-next-line: object-literal-key-quotes
+      'pais': this.pais, 'estado': this.estado, 'sexo': this.sexo,
+      // tslint:disable-next-line: object-literal-key-quotes
+      'idade': this.idade, 'senha': this.senha, 'cidade': this.cidade
+    }).subscribe(
+      (retorno: any) => {
+        console.log('deu certo');
+      }, (error: any) => {
+        this.nav.navigateForward('/login');
+      });
   }
 
   ionViewDidEnter() {
     this.baseService.loading = false;
+  }
+
+
+  async openModalAviso() {
+    if (this.senha === this.senha2) {
+      this.cadastrar();
+    } else {
+      this.baseService.aviso = 'As senhas não coincidem. Tente novamente.';
+      const modal = await this.modalavisoController.create({
+        component: ModalAvisoPage,
+        cssClass: 'modal',
+        componentProps: {
+        }
+      });
+      return await modal.present();
+    }
   }
 }
 

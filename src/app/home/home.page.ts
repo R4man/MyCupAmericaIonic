@@ -9,17 +9,19 @@ import { NavController } from '@ionic/angular';
 })
 export class HomePage {
 
-  constructor(private baseService: BaseService,
+  constructor(public baseService: BaseService,
               private nav: NavController) {
-  }
-
-  clicou() {
-    this.nav.navigateForward('/login');
   }
 
 
   ionViewDidEnter() {
+    this.nav.navigateForward('/login');
+    this.baseService.header = false;
     this.baseService.loading = false;
+  }
+
+  ionViewWillLeave() {
+    this.baseService.home = false;
   }
 
 }

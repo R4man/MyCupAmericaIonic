@@ -5,13 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LoginPage } from './login.page';
-import { HttpClientModule } from '@angular/common/http';
+import { ModalAvisoPage } from './modal-aviso.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: LoginPage
+    component: ModalAvisoPage
   }
 ];
 
@@ -20,9 +19,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes),
-    HttpClientModule,
+    RouterModule.forChild(routes)
   ],
-  declarations: [LoginPage]
+  declarations: [ModalAvisoPage]
 })
-export class LoginPageModule {}
+export class ModalAvisoPageModule {}

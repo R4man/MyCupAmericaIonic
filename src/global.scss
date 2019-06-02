@@ -67,7 +67,7 @@
   height: 50%;
 }
 
-.h-60{
+.h-60 {
   height: 60%;
 }
 
@@ -229,7 +229,7 @@
   padding: 20px;
 }
 
-.p-2{
+.p-2 {
   padding: 2%;
 }
 
@@ -320,4 +320,11 @@ a {
 .ion-card-content {
   display: inline;
   position: relative;
+}
+
+.modal .modal-wrapper {
+  height: 20%;
+  top: 80%;
+  position: absolute;
+  display: block;
 }
