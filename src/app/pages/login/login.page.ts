@@ -39,6 +39,7 @@ export class LoginPage implements OnInit {
 
 
   ionViewWillEnter() {
+    this.baseService.header = true;
     const hora = new Date().getHours();
     if (hora < 12 && hora > 5) {
       this.saudacoes = 'Bom dia!';
