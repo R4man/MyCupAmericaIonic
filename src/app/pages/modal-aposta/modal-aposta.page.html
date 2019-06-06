@@ -1,9 +1,55 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>modal-aposta</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+<div class="p-2 w-100 h-100">
+  <div class="h-20 alinha-meio">
+    <ion-row name="bandeiras" class="">
+      <div name="bandeira1" class="w-40">
+        <ion-col>
+          <div class="alinha-base">
+            <ion-img class="h-50p w-50p m-0" src="../assets/img/band150x150sigla/arg.png"></ion-img>
+          </div>
+          <div class="alinha-topo p-2">
+            <input autocomplete="off" type="text" aria-label="" class="w-100">
+          </div>
+        </ion-col>
+      </div>
+      <div class="w-20 alinha-centro">
+        X
+      </div>
+      <div name="bandeira2" class="w-40">
+        <ion-col>
+          <div class="alinha-base">
+            <ion-img class="h-50p w-50p m-0" src="../assets/img/band150x150sigla/bra.png"></ion-img>
+          </div>
+          <div class="alinha-topo p-2">
+            <input autocomplete="off" type="text" aria-label="" class="w-100">
+          </div>
+        </ion-col>
+      </div>
+    </ion-row>
+  </div>
+  <div class="h-60">
+    <div class="h-10">
+      Saldo: <ion-label name="saldo">500$</ion-label>
+    </div>
+    <div class="h-20">
+        Informações (<ion-label name="nome-time1">time1</ion-label>): <ion-label name="info-time1">DSUAHDUASDHUASHDUH</ion-label>
+    </div>
+    <div class="h-20">
+        Informações (<ion-label name="nome-time2">time2</ion-label>): <ion-label name="info-time2">DSUAHDUASDHUASHDUH</ion-label>
+    </div>
+    <div class="h-50">
+      <input autocomplete="off" type="text" aria-label="" placeholder="Aposta" class="w-50">
+    </div>
+  </div>
+  <div class="h-20">
+    <ion-row>
+      <div class="w-50 alinha-centro">
+        <ion-button expand="" fill="solid" class="w-90" size="default" mode="md" (click)="apostar()"> Apostar
+        </ion-button>
+      </div>
+      <div class="w-50 alinha-centro">
+        <ion-button expand="" fill="solid" class="w-90" size="default" mode="md" (click)="cancelar()"> Cancelar
+        </ion-button>
+      </div>
+    </ion-row>
+  </div>
+</div>

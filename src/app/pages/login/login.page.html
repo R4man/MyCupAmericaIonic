@@ -1,12 +1,14 @@
 <div class="h-33 w-100">
-    <h1 class="card-text caixa-texto alinha-centro">Oláaaaaaaaaaaaaaa</h1>
+    <h1 class="card-text caixa-texto alinha-centro">{{saudacoes}}</h1>
     <ion-row size="3">
         <ion-col class="alinha-meio" class="m-1" style="flex-direction: column">
             <div class="h-100 w-100 alinha-meio">
-                <input autocomplete="off" type="text" aria-label="" class="alinha-meio" placeholder="Login">
+                <input autocomplete="off" type="text" aria-label="" class="alinha-meio" placeholder="Usuário"
+                    [(ngModel)]="login">
             </div>
             <div class="h-100 w-100 alinha-meio">
-                <input autocomplete="off" type="text" aria-label="" class="alinha-meio" placeholder="Senha" name="senha">
+                <input autocomplete="off" type="text" aria-label="" class="alinha-meio" placeholder="Senha" name="senha"
+                    [(ngModel)]="senha">
             </div>
         </ion-col>
     </ion-row>
@@ -16,7 +18,7 @@
     <div>
         <ion-row size="3">
             <ion-col class="alinha-centro">
-                <ion-button expand="" fill="solid" size="default" mode="md" (click)="clicou()"> Enviar
+                <ion-button expand="" fill="solid" size="default" mode="md" (click)="enviar()"> Enviar
                 </ion-button>
             </ion-col>
         </ion-row>
@@ -24,10 +26,8 @@
     <div>
         <ion-row size="3">
             <ion-col class="alinha-base">
-                <ion-button expand="" fill="clear" size="default" mode="md" (click)="clicou()"> Esqueci o
-                    nickmane
-                    ou
-                    senha
+                <ion-button expand="" fill="clear" size="default" mode="md" routerLink="/alzheimer"> Esqueci o nickname
+                    ou senha
                 </ion-button>
             </ion-col>
         </ion-row>
@@ -49,7 +49,7 @@
             </a>
         </div>
         <div class="w-50">
-            <a href="/data-jogos">
+            <a href="/sobre">
                 <ion-card class="w-90 h-90">
                     <ion-card-header class="alinha-meio">
                         <font color="black"><i class="fas fa-info-circle" style="font-size: 400%;"></i>

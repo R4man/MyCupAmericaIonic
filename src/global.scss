@@ -22,6 +22,9 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+//Google fonts
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+
 .cor-if-verde {
   --background: #00420c;
   --background-activated: rgb(0, 41, 7);
@@ -47,8 +50,32 @@
   background-color: #dbffff;
 }
 
+.h-10 {
+  height: 10%;
+}
+
+.h-20 {
+  height: 20%;
+}
+
+.h-30 {
+  height: 30%;
+}
+
+.h-33 {
+  height: 33.33%;
+}
+
 .h-50 {
   height: 50%;
+}
+
+.h-60 {
+  height: 60%;
+}
+
+.h-70 {
+  height: 70%;
 }
 
 .h-80 {
@@ -63,20 +90,8 @@
   height: 100%;
 }
 
-.h-33 {
-  height: 33.33%;
-}
-
 .h-50p {
   height: 50px;
-}
-
-.h-30 {
-  height: 30%;
-}
-
-.h-20 {
-  height: 20%;
 }
 
 .w-10 {
@@ -217,6 +232,10 @@
   padding: 20px;
 }
 
+.p-2 {
+  padding: 2%;
+}
+
 .tamanho-texto10p {
   font-size: 10px;
 }
@@ -304,4 +323,18 @@ a {
 .ion-card-content {
   display: inline;
   position: relative;
+}
+
+.modal .modal-wrapper {
+  height: 20%;
+  top: 80%;
+  position: absolute;
+  display: block;
+}
+#header-title {
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  font-size: 20px;
+  height: 50px;
+  margin: 0;
 }

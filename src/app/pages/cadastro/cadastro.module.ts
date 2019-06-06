@@ -5,7 +5,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import * as cadastroPage from "./cadastro.page";
+import * as cadastroPage from './cadastro.page';
+import { HttpClientModule } from '@angular/common/http';
+import { ModalAvisoPage } from '../modal-aviso/modal-aviso.page';
 
 const routes: Routes = [
   {
@@ -19,8 +21,10 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    HttpClientModule,
   ],
-  declarations: [cadastroPage.CadastroPage]
+  declarations: [cadastroPage.CadastroPage],
+  exports: [cadastroPage.CadastroPage]
 })
 export class CadastroPageModule {}
