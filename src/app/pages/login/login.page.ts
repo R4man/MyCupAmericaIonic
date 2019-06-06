@@ -22,13 +22,13 @@ export class LoginPage implements OnInit {
   senha: string;
 
   enviar() {
-    const url = this.baseService.baseURL + '/cadastro/';
+    const url = this.baseService.baseURL + '/login/';
     // tslint:disable-next-line: object-literal-key-quotes
     this.httpClient.post<any>(url, { 'nickname': this.login, 'senha': this.senha }).subscribe(
       (retorno: any) => {
-        console.log('deu certo');
-      }, (error: any) => {
         this.nav.navigateForward('/data-jogos');
+      }, (error: any) => {
+        console.log('deu certo');
       });
   }
 
