@@ -21,10 +21,11 @@
                 [(ngModel)]="pais" />
         </div>
         <div class="borda-cinza">
-            <input id="idade" name="idade" required="required" type="text" placeholder="idade" [(ngModel)]="idade" />
+            <input id="idade" name="idade" required="required" type="text" placeholder="Idade" [(ngModel)]="Idade" />
         </div>
         <div class="borda-cinza">
-            <select [(ngModel)]="sexo" name="sexo" required="required" placeholder="Sexo">
+            <select [(ngModel)]="sexo" name="sexo" required="required" placeholder="Sexo" >
+                <option value="" disabled selected>Sexo</option>
                 <option value="Masculino">Masculino</option>
                 <option value="Feminino">Feminino</option>
                 <option value="Outro">Outro</option>
@@ -39,7 +40,7 @@
                 [(ngModel)]="senha2" />
         </div>
         <div class="">
-            <ion-button expand="full" fill="" mode="md" (click)='openModalAviso()'>Cadastrar
+            <ion-button expand="block" fill="solid" color="light" mode="md" (click)='openModalAviso()'>Cadastrar
             </ion-button>
         </div>
     </form>
