@@ -9,7 +9,17 @@
       <ion-row class="m-0">
         <div class="w-20 h-100">
            <div *ngIf="baseService.showMenuButton" class="w-20 h-100">
-            <a class="fas fa-bars"></a>
+            <a class="fas fa-bars">
+              <ion-menu menuId="menu" side="start">
+                <ion-list>
+                  <ion-item>Menu Item</ion-item>
+                  <ion-item>Menu Item</ion-item>
+                  <ion-item>Menu Item</ion-item>
+                  <ion-item>Menu Item</ion-item>
+                  <ion-item>Menu Item</ion-item>
+                </ion-list>
+              </ion-menu>
+            </a>
           </div>
           <div *ngIf="baseService.showBackButton" class="w-20 h-100">
             <ion-button routerLink="/login" expand="full" fill="" mode="md" class="w-100 h-100">

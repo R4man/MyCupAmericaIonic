@@ -42,6 +42,13 @@ export class DataJogosPage implements OnInit {
     return await modal.present();
   }
 
+  ionViewWillEnter() {
+    this.baseService.showMenuButton = true;
+  }
+  
+  ionViewWillLeave() {
+    this.baseService.showMenuButton = false;
+  }
 
   ionViewDidEnter() {
     this.baseService.loading = false;

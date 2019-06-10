@@ -4,6 +4,7 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { BaseService } from './base.service';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ import { BaseService } from './base.service';
 })
 export class AppComponent {
   constructor(
+    private menu: MenuController,
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
@@ -25,4 +27,11 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+
+  openMenu() {
+    this.menu.enable(true, 'menu');
+    this.menu.open('menu');
+  }
+
 }
+
