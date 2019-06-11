@@ -23,6 +23,8 @@ export class LoginPage implements OnInit {
   senha: string;
 
   enviar() {
+    this.baseService.login = this.login;
+    this.baseService.senha = this.senha;
     const url = this.baseService.baseURL + '/login/';
     // tslint:disable-next-line: object-literal-key-quotes
     this.httpClient.post<any>(url, { 'nickname': this.login, 'senha': this.senha }).subscribe(
@@ -48,9 +50,9 @@ export class LoginPage implements OnInit {
   ionViewWillEnter() {
     this.baseService.header = true;
     const hora = new Date().getHours();
-    if (hora < 12 && hora > 5) {
+    if (hora < 12 && hora >= 5) {
       this.saudacoes = 'Bom dia!';
-    } else if (hora > 12) {
+    } else if (hora >= 12 && hora < 19) {
       this.saudacoes = 'Boa tarde!';
     } else {
       this.saudacoes = 'Boa noite!';

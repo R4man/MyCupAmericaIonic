@@ -16,4 +16,6 @@ export class BaseService {
     jogos: DataJogo[] = null;
     jogo2existe = false;
     qualjogo = null;
+    login: string;
+    senha: string;
 }
