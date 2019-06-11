@@ -11,5 +11,5 @@ export class BaseService {
     aviso = 'null';
     caminhoImagemPadrao = '../assets/img/';
     jogo2 = true;
-    baseURL = 'http://127.0.0.1:8000/mycup';
+    baseURL = 'web.farroupilha.ifrs.edu.br/paginas/~mycup/mobile/api/MyCup/mycup';
 }
