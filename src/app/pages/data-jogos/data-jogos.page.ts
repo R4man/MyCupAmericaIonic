@@ -22,16 +22,15 @@ export class DataJogosPage {
   constructor(public baseService: BaseService,
     // tslint:disable-next-line: align
     private modalapostaController: ModalController,
-              private httpClient: HttpClient) {
+              private httpClient: HttpClient) { }
 
-  }
-  sel11img = '../assets/img/band150x150sigla/' + this.baseService.jogos[this.baseService.qualjogo].sel1 + '.png';
-  sel12img = '../assets/img/band150x150sigla/' + this.baseService.jogos[this.baseService.qualjogo].sel2 + '.png';
-  sel21img = '../assets/img/band150x150sigla/' + this.baseService.jogos[this.baseService.qualjogo].sel1 + '.png';
-  sel22img = '../assets/img/band150x150sigla/' + this.baseService.jogos[this.baseService.qualjogo].sel2 + '.png';
+  sel11img = '../assets/img/band150x150sigla/bra.png';
+  sel12img = '../assets/img/band150x150sigla/bra.png';
+  sel21img = '../assets/img/band150x150sigla/bra.png';
+  sel22img = '../assets/img/band150x150sigla/bra.png';
 
   requisicao_jogos(variavel: Date) {
-    if (variavel === null) {
+    if (variavel != null) {
       const mes = variavel.getMonth;
       const dia = variavel.getDay;
       const dataCompleta = '2019-' + mes + '-' + dia;
