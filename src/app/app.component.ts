@@ -16,9 +16,22 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    public baseService: BaseService
+    public baseService: BaseService,
+    public menu: MenuController
   ) {
     this.initializeApp();
+  }
+  openFirst() {
+    this.menu.enable(true, 'menu');
+    this.menu.open('menu');
+  }
+
+  openEnd() {
+    this.menu.open('menu');
+  }
+  openCustom() {
+    this.menu.enable(true, 'menu');
+    this.menu.open('menu');
   }
 
   initializeApp() {

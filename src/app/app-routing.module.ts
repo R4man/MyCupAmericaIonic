@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'sobre', loadChildren: './pages/sobre/sobre.module#SobrePageModule' },
   { path: 'alzheimer', loadChildren: './pages/alzheimer/alzheimer.module#AlzheimerPageModule' },
   { path: 'perfil', loadChildren: './pages/perfil/perfil.module#PerfilPageModule' }
+  
 
 ];
 
