@@ -12,7 +12,7 @@ import { MenuController } from '@ionic/angular';
 })
 export class AppComponent {
   constructor(
-    private menu: MenuController,
+   
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
@@ -27,11 +27,4 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
-
-  openMenu() {
-    this.menu.enable(true, 'menu');
-    this.menu.open('menu');
-  }
-
 }
-

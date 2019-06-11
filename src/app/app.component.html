@@ -10,15 +10,15 @@
         <div class="w-20 h-100">
            <div *ngIf="baseService.showMenuButton" class="w-20 h-100">
             <a class="fas fa-bars">
-              <ion-menu menuId="menu" side="start">
+
+              <ion-menu>
                 <ion-list>
-                  <ion-item>Menu Item</ion-item>
-                  <ion-item>Menu Item</ion-item>
-                  <ion-item>Menu Item</ion-item>
-                  <ion-item>Menu Item</ion-item>
-                  <ion-item>Menu Item</ion-item>
+                  <ion-button expand="" fill="clear" size="default" mode="md" routerLink="/perfil">Perfil</ion-button>
+                  <ion-button expand="" fill="clear" size="default" mode="md" routerLink="/login">Grupos</ion-button>
+                  <ion-button expand="" fill="clear" size="default" mode="md" routerLink="/login">Seleções</ion-button>
                 </ion-list>
               </ion-menu>
+
             </a>
           </div>
           <div *ngIf="baseService.showBackButton" class="w-20 h-100">
