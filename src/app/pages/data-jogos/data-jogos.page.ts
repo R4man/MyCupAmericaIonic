@@ -99,7 +99,7 @@ export class DataJogosPage {
   ionViewWillEnter() {
     this.baseService.showMenuButton = true;
   }
-  
+
   ionViewWillLeave() {
     this.baseService.showMenuButton = false;
   }
