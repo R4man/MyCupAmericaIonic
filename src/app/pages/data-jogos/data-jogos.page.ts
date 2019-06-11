@@ -42,11 +42,13 @@ export class DataJogosPage {
             jogo2.sel2,
             jogo2.gol1,
             jogo2.gol2,
+            jogo2.horario,
             jogo2.estadio,
+            jogo2.local,
             jogo2.nickname,
             jogo2.valor_apostado,
             jogo2.aconteceu);
-          this.baseService.jogoAtual2 = jogoAtual2;
+          this.baseService.jogos[1] = jogoAtual2;
           this.baseService.jogo2existe = true;
         }
         const jogo = todosJogos[0];
@@ -54,12 +56,13 @@ export class DataJogosPage {
           jogo.sel2,
           jogo.gol1,
           jogo.gol2,
+          jogo.horario,
           jogo.estadio,
+          jogo.local,
           jogo.nickname,
           jogo.valor_apostado,
           jogo.aconteceu);
-        this.baseService.jogoAtual1 = jogoAtual1;
-        this.baseService.jogo1existe = true;
+        this.baseService.jogos[0] = jogoAtual1;
       }, (error: any) => {
         console.log('deu certo');
       });
@@ -83,9 +86,8 @@ export class DataJogosPage {
     this.requisicao_jogos(null);
   }
 
-  async openModalAposta(jogo: string) {
-    this.jogo = jogo;
-    console.log(this.jogo);
+  async openModalAposta(jogo: number) {
+    this.baseService.qualjogo = jogo;
     const modal = await this.modalapostaController.create({
       component: ModalApostaPage,
       componentProps: {

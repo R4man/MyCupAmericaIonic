@@ -1,4 +1,4 @@
-<div class="h-20 alinha-centro" >
+<div class="h-20 alinha-centro">
   <ion-row class="w-100 alinha-meio">
     <ion-col class="w-23 h-100">
       <div id="botao-voltar-data" class="">
@@ -27,48 +27,52 @@
   <a (click)="openModalAposta(1)">
     <ion-row name="bandeiras" class="alinha-meio m-3">
       <div name="bandeira1" class="w-40 alinha-meio">
-        <ion-img class="h-50p w-50p m-0" src="../assets/img/band150x150sigla/arg.png"></ion-img>
+        <ion-img class="h-50p w-50p m-0" src={{baseService.sel11img}}></ion-img>
       </div>
       <div class="w-20 alinha-centro">
+        {{baseService.jogos[0].gol1}} 
+        X 
+        {{baseService.jogos[0].gol2}}
       </div>
       <div name="bandeira2" class="w-40 alinha-meio">
-        <ion-img class="h-50p w-50p m-0" src="../assets/img/band150x150sigla/bra.png"></ion-img>
+        <ion-img class="h-50p w-50p m-0" src={{baseService.sel12img}}></ion-img>
       </div>
     </ion-row>
     <ion-row name="data-jogo" class="alinha-meio m-3">
       <div name="hora-local">
-        HH:MM - Estádio - Local
+          {{baseService.jogos[0].horario}} - {{baseService.jogos[0].estadio}} - {{baseService.jogos[0].local}}
       </div>
     </ion-row>
     <ion-row name="aposta1" class="alinha-meio m-3">
-      <div name="aposta_primeiro_jogo" *ngIf="baseService.jogo1existe">
+      <div name="aposta_primeiro_jogo">
         APOSTA
       </div>
     </ion-row>
   </a>
 </div>
 <div class="h-50">
-    <a (click)="openModalAposta(2)"  *ngIf="baseService.jogo2existe">
-        <ion-row name="bandeiras" class="alinha-meio m-3">
-          <div name="bandeira1" class="w-40 alinha-meio">
-            <ion-img class="h-50p w-50p m-0" src="../assets/img/band150x150sigla/arg.png"></ion-img>
-          </div>
-          <div class="w-20 alinha-centro">
-            
-            X
-          </div>
-          <div name="bandeira2" class="w-40 alinha-meio">
-            <ion-img class="h-50p w-50p m-0" src="../assets/img/band150x150sigla/bra.png"></ion-img>
-          </div>
-        </ion-row>
-        <ion-row name="data-jogo" class="alinha-meio m-3">
-          <div name="hora-local">
-            HH:MM - Estádio - Local
-          </div>
-        </ion-row>
-        <ion-row name="aposta2" class="alinha-meio m-3">
-            <div name="aposta_segundo_jogo" *ngIf="baseService.jogoAtual2.valorApostado">
-            </div>
-          </ion-row>
-      </a>
+  <div class="h-100 w-100" *ngIf="baseService.jogo2existe">
+    <a (click)="openModalAposta(2)" *ngIf="baseService.jogo2existe">
+      <ion-row name="bandeiras" class="alinha-meio m-3">
+        <div name="bandeira1" class="w-40 alinha-meio">
+          <ion-img class="h-50p w-50p m-0" src={{baseService.sel21img}}></ion-img>
+        </div>
+        <div class="w-20 alinha-centro">
+          {{baseService.jogos[1].gol1}} 
+          X 
+          {{baseService.jogos[1].gol2}}
+        </div>
+        <div name="bandeira2" class="w-40 alinha-meio">
+          <ion-img class="h-50p w-50p m-0" src={{baseService.sel22img}}></ion-img>
+        </div>
+      </ion-row>
+      <ion-row name="data-jogo" class="alinha-meio m-3">
+        <div name="hora-local">
+          {{baseService.jogos[1].horario}} - {{baseService.jogos[1].estadio}} - {{baseService.jogos[1].local}}
+        </div>
+      </ion-row>
+      <ion-row name="aposta2" class="alinha-meio m-3">
+      </ion-row>
+    </a>
+  </div>
 </div>

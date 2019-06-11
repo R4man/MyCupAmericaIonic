@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { DataJogosPage } from './data-jogos.page';
 import { ModalApostaPage } from '../modal-aposta/modal-aposta.page';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
+    HttpClientModule,
   ],
   declarations: [DataJogosPage, ModalApostaPage],
   entryComponents: [ModalApostaPage],

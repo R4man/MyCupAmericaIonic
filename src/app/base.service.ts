@@ -11,11 +11,13 @@ export class BaseService {
     showMenuButton = false;
     showBackButton = false;
     aviso = 'null';
-    caminhoImagemPadrao = '../assets/img/';
     baseURL = 'http://127.0.0.1:8000/mycup';
     usuario: Usuario = null;
-    jogoAtual1: DataJogo = null;
-    jogoAtual2: DataJogo = null;
-    jogo1existe = false;
+    jogos: DataJogo[] = null;
     jogo2existe = false;
+    qualjogo = null;
+    sel11img = '../assets/img/band150x150sigla/' + this.jogos[0].sel1 + '.png';
+    sel12img = '../assets/img/band150x150sigla/' + this.jogos[0].sel2 + '.png';
+    sel21img = '../assets/img/band150x150sigla/' + this.jogos[1].sel1 + '.png';
+    sel22img = '../assets/img/band150x150sigla/' + this.jogos[1].sel2 + '.png';
 }
