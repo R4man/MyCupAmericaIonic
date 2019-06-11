@@ -34,15 +34,16 @@ export class DataJogosPage {
     if (variavel != null) {
 
     }
-    const url = this.baseService.baseURL + '/login/';
+    const url = this.baseService.baseURL + '/consultarJogos/';
     // tslint:disable-next-line: object-literal-key-quotes
-    this.httpClient.post<any>(url, { 'dia': this.dataSelecionada }).subscribe(
+    this.httpClient.post<any>(url, { 'dia': this.dataSelecionada, 'nickname': this.baseService.usuario.nickname }).subscribe(
       (retorno: any) => {
         this.baseService.jogo2existe = false;
         const todosJogos = retorno.pessoas;
         if (todosJogos.length > 1) {
           const jogo2 = todosJogos[1];
-          const jogoAtual2 = new DataJogo(jogo2.sel1,
+          const jogoAtual2 = new DataJogo(jogo2.pkJogo,
+            jogo2.sel1,
             jogo2.sel2,
             jogo2.gol1,
             jogo2.gol2,
@@ -56,7 +57,8 @@ export class DataJogosPage {
           this.baseService.jogo2existe = true;
         }
         const jogo = todosJogos[0];
-        const jogoAtual1 = new DataJogo(jogo.sel1,
+        const jogoAtual1 = new DataJogo(jogo.pkJogo,
+          jogo.sel1,
           jogo.sel2,
           jogo.gol1,
           jogo.gol2,
