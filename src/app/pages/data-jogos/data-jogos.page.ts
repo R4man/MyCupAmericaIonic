@@ -31,8 +31,16 @@ export class DataJogosPage {
   sel22img = '../assets/img/band150x150sigla/' + this.baseService.jogos[this.baseService.qualjogo].sel2 + '.png';
 
   requisicao_jogos(variavel: Date) {
-    if (variavel != null) {
-
+    if (variavel === null) {
+      const mes = variavel.getMonth;
+      const dia = variavel.getDay;
+      const dataCompleta = '2019-' + mes + '-' + dia;
+      if (this.dataJogos.indexOf(dataCompleta) != null) {
+        this.dataSelecionada = dataCompleta;
+      } else {
+        this.dataJogos[2].slice(0, 2);
+      }
+      console.log(dia);
     }
     const url = this.baseService.baseURL + '/login/';
     // tslint:disable-next-line: object-literal-key-quotes
