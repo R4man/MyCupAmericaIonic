@@ -16,6 +16,11 @@ export class ModalApostaPage implements OnInit {
   constructor(private ModalApostaController: ModalController, public baseService: BaseService) { }
 
 
+  // sel11img = '../assets/img/band150x150sigla/' + this.baseService.jogos[this.baseService.qualjogo].sel1 + '.png';
+  // sel12img = '../assets/img/band150x150sigla/' + this.baseService.jogos[this.baseService.qualjogo].sel2 + '.png';
+  // sel21img = '../assets/img/band150x150sigla/' + this.baseService.jogos[this.baseService.qualjogo].sel1 + '.png';
+  // sel22img = '../assets/img/band150x150sigla/' + this.baseService.jogos[this.baseService.qualjogo].sel2 + '.png';
+
   ngOnInit() {
   }
 
