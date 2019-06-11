@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BaseService } from '../base.service';
 import { NavController } from '@ionic/angular';
 
@@ -7,15 +7,20 @@ import { NavController } from '@ionic/angular';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
+  ngOnInit() {
+    if (this.baseService.usuario != null) {
+      this.nav.navigateForward('/data-jogos');
+    } else {
+      this.nav.navigateForward('/login');
+    }
+  }
 
   constructor(public baseService: BaseService,
               private nav: NavController) {
   }
 
-
   ionViewDidEnter() {
-    this.nav.navigateForward('/login');
     this.baseService.header = false;
     this.baseService.loading = false;
   }

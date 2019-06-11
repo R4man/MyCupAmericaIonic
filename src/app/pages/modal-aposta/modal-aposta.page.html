@@ -28,13 +28,13 @@
   </div>
   <div class="h-60">
     <div class="h-30">
-      Saldo: <ion-label name="saldo">500$</ion-label>
+      Saldo: <ion-label name="saldo">{{baseService.usuario.saldo}}</ion-label>
     </div>
     <div class="h-70">
       <ion-label class="alinha-meio" [(ngModel)]="valorSaldo">
         Aposta
       </ion-label>
-      <ion-range color="success" max={{maximo}} step="1" min="1" pin="true" [(ngModel)]="valorAposta"></ion-range>
+      <ion-range color="success" max={{baseService.usuario.saldo}} step="1" min="1" pin="true" [(ngModel)]="valorAposta"></ion-range>
     </div>
   </div>
   <div class="h-20">
