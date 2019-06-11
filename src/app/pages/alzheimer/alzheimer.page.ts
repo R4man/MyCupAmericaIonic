@@ -22,8 +22,9 @@ export class AlzheimerPage {
   email: string;
 
   enviar(): boolean {
+
     let i = true;
-    const url = this.baseService.baseURL + '/cadastro/';
+    const url = this.baseService.baseURL + '/reset/';
     // tslint:disable-next-line: object-literal-key-quotes
     this.httpClient.post<any>(url, { 'email': this.email }).subscribe(
       (retorno: any) => {
