@@ -6,21 +6,15 @@
                 <div class="input_login" id="username_input">
                     <i class="far fa-envelope icon_login"></i>
                     <input autocomplete="off" type="text" aria-label="" class="" placeholder="Usuário"
-                        [(ngModel)]="login" style="border: none"
-                        onclick="getElementById('username_input').style.borderbottom= 'green'">
+                        [(ngModel)]="login" style="border: none">
                 </div>
             </div>
             <div class="h-100 w-100 alinha-meio container_login">
                 <div class="input_login" id="password_input">
                     <i class="fas fa-lock icon_login"></i>
-                    <script>
-                            function myFunction() {
-                                document.getElementById("password_input").style.borderBottom = "thick solid #0000FF";
-                            }
-                        </script>
                     <input autocomplete="off" type="password" aria-label="" class="" placeholder="Senha" name="senha"
-                        [(ngModel)]="senha" style="border: none" onclick="myFunction()">
-                        
+                        [(ngModel)]="senha" style="border: none">
+
                 </div>
             </div>
         </ion-col>
@@ -47,25 +41,23 @@
     </div>
 </div>
 
-<div class="h-33 w-100">
+<div class="h-33 w-100 alinha-base" style="margin-bottom: 25px;">
     <ion-row size="3" style="text-align: -webkit-center;">
         <div class="w-50">
             <a href="/cadastro">
-                <div style="width:100px;height:100%">
+                <div style="width:100px;height:100%;">
                     <i class="fas fa-user-plus" style="font-size: 200%; width: 100%;"></i>
                     <ion-label>Novo aqui</ion-label>
                 </div>
             </a>
         </div>
         <div class="w-50">
-            <div style="width: 50%">
-                <a href="/sobre">
-                    <div style="width:100px;height:100%">
-                        <i class="fas fa-info-circle" style="font-size: 200%; width: 100%;"></i>
-                        <ion-label>Sobre</ion-label>
-                    </div>
-                </a>
-            </div>
+            <a href="/sobre">
+                <div style="width:100px;height:100%">
+                    <i class="fas fa-info-circle" style="font-size: 200%; width: 100%;"></i>
+                    <ion-label>Sobre</ion-label>
+                </div>
+            </a>
         </div>
     </ion-row>
 </div>

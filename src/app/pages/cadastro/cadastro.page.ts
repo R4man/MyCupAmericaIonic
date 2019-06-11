@@ -31,20 +31,16 @@ export class CadastroPage {
   senha2: string;
   sex: string;
 
-	
+
 
   cadastrar() {
-	  if (this.sexo === 'Masculino') {
-		 this.sex = 'M';
-	} else if (this.sexo === 'Feminino') {
-		this.sex = 'F';
-	} else {
-		this.sex = 'O';
-	};
-    // tslint:disable-next-line: max-line-length
-    console.log(this.nome, this.nickname, this.email,
-      this.pais, this.estado, this.sex,
-      this.idade, this.senha, this.cidade);
+    if (this.sexo === 'Masculino') {
+      this.sex = 'M';
+    } else if (this.sexo === 'Feminino') {
+      this.sex = 'F';
+    } else {
+      this.sex = 'O';
+    }
     const url = this.baseService.baseURL + '/cadastrar/';
     // tslint:disable-next-line: object-literal-key-quotes
     this.httpClient.post<any>(url, {
@@ -64,7 +60,7 @@ export class CadastroPage {
 
   async openModalAviso() {
     if (this.senha === this.senha2) {
-// tslint:disable-next-line: max-line-length
+      // tslint:disable-next-line: max-line-length
       this.baseService.aviso = 'Um e-mail de confirmação foi enviado, confira sua caixa de entrada e ative seu cadastro. Caso não receber em até 30 min. entre em contato com projetomycup@gmail.com';
       this.cadastrar();
     } else {

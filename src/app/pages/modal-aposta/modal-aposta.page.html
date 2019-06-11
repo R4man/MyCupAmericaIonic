@@ -4,10 +4,11 @@
       <div name="bandeira1" class="w-40">
         <ion-col>
           <div class="alinha-base">
-            <ion-img class="h-50p w-50p m-0" src="../assets/img/band150x150sigla/arg.png"></ion-img>
+            <ion-img class="h-50p w-50p m-0" *ngIf="baseService.qualjogo === 1" src={{sel11img}}></ion-img>
+            <ion-img class="h-50p w-50p m-0" *ngIf="baseService.qualjogo === 2" src={{sel21img}}></ion-img>
           </div>
           <div class="alinha-topo p-2">
-            <input autocomplete="off" type="text" aria-label="" class="w-100">
+            <input [(ngModel)]="gols1" autocomplete="off" type="text" aria-label="" class="w-100">
           </div>
         </ion-col>
       </div>
@@ -17,33 +18,31 @@
       <div name="bandeira2" class="w-40">
         <ion-col>
           <div class="alinha-base">
-            <ion-img class="h-50p w-50p m-0" src="../assets/img/band150x150sigla/bra.png"></ion-img>
+              <ion-img class="h-50p w-50p m-0" *ngIf="baseService.qualjogo === 1" src={{sel12img}}></ion-img>
+              <ion-img class="h-50p w-50p m-0" *ngIf="baseService.qualjogo === 2" src={{sel22img}}></ion-img>
           </div>
           <div class="alinha-topo p-2">
-            <input autocomplete="off" type="text" aria-label="" class="w-100">
+            <input [(ngModel)]="gols2" autocomplete="off" type="text" aria-label="" class="w-100">
           </div>
         </ion-col>
       </div>
     </ion-row>
   </div>
   <div class="h-60">
-    <div class="h-10">
-      Saldo: <ion-label name="saldo">500$</ion-label>
+    <div class="h-30">
+      Saldo: <ion-label name="saldo">{{baseService.usuario.saldo}}</ion-label>
     </div>
-    <div class="h-20">
-        Informações (<ion-label name="nome-time1">time1</ion-label>): <ion-label name="info-time1">DSUAHDUASDHUASHDUH</ion-label>
-    </div>
-    <div class="h-20">
-        Informações (<ion-label name="nome-time2">time2</ion-label>): <ion-label name="info-time2">DSUAHDUASDHUASHDUH</ion-label>
-    </div>
-    <div class="h-50">
-      <input autocomplete="off" type="text" aria-label="" placeholder="Aposta" class="w-50">
+    <div class="h-70">
+      <ion-label class="alinha-meio" [(ngModel)]="valorSaldo">
+        Aposta
+      </ion-label>
+      <ion-range color="success" max={{baseService.usuario.saldo}} step="1" min="1" pin="true" [(ngModel)]="valorAposta"></ion-range>
     </div>
   </div>
   <div class="h-20">
     <ion-row>
-      <div class="w-50 alinha-centro">
-        <ion-button expand="" fill="solid" class="w-90" size="default" mode="md" (click)="apostar()"> Apostar
+      <div class="w-50 alinha-centro" >
+        <ion-button *ngIf="true" expand="" fill="solid" class="w-90" size="default" mode="md" (click)="apostar()"> Apostar
         </ion-button>
       </div>
       <div class="w-50 alinha-centro">

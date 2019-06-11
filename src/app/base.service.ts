@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Usuario } from './shared/classe.usuario';
+import { DataJogo } from './shared/classe.DataJogo';
 
 @Injectable()
 export class BaseService {
@@ -9,7 +11,11 @@ export class BaseService {
     showMenuButton = false;
     showBackButton = false;
     aviso = 'null';
-    caminhoImagemPadrao = '../assets/img/';
-    jogo2 = true;
-    baseURL = 'http://127.0.0.1:8000/mycup';
+    baseURL = 'web.farroupilha.ifrs.edu.br/paginas/~mycup/mobile/api/MyCup/mycup';
+    usuario: Usuario = null;
+    jogos: DataJogo[] = null;
+    jogo2existe = false;
+    qualjogo = null;
+    login: string;
+    senha: string;
 }
