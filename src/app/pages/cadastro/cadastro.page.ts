@@ -29,22 +29,31 @@ export class CadastroPage {
   idade: string;
   senha: string;
   senha2: string;
+  sex: string;
 
+	
 
   cadastrar() {
+	  if (this.sexo === 'Masculino') {
+		 this.sex = 'M';
+	} else if (this.sexo === 'Feminino') {
+		this.sex = 'F';
+	} else {
+		this.sex = 'O';
+	};
     // tslint:disable-next-line: max-line-length
     console.log(this.nome, this.nickname, this.email,
-      this.pais, this.estado, this.sexo,
+      this.pais, this.estado, this.sex,
       this.idade, this.senha, this.cidade);
-    const url = this.baseService.baseURL + '/cadastro/';
+    const url = this.baseService.baseURL + '/cadastrar/';
     // tslint:disable-next-line: object-literal-key-quotes
     this.httpClient.post<any>(url, {
       // tslint:disable-next-line: object-literal-key-quotes
       'nome': this.nome, 'nickname': this.nickname, 'email': this.email,
       // tslint:disable-next-line: object-literal-key-quotes
-      'pais': this.pais, 'estado': this.estado, 'sexo': this.sexo,
+      'pais': this.pais, 'estado': this.estado, 'sexo': this.sex,
       // tslint:disable-next-line: object-literal-key-quotes
-      'idade': this.idade, 'senha': this.senha, 'cidade': this.cidade
+      'idade': this.idade, 'senha': this.senha, 'cidade': this.cidade, 'icone': '2'
     }).subscribe(
       (retorno: any) => {
         console.log('deu certo');
