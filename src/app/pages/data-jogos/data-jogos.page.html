@@ -40,6 +40,11 @@
         HH:MM - Estádio - Local
       </div>
     </ion-row>
+    <ion-row name="aposta1" class="alinha-meio m-3">
+      <div name="aposta_primeiro_jogo" *ngIf="baseService.apostou1">
+        APOSTA
+      </div>
+    </ion-row>
   </a>
 </div>
 <div class="h-50">
@@ -60,5 +65,10 @@
             HH:MM - Estádio - Local
           </div>
         </ion-row>
+        <ion-row name="aposta2" class="alinha-meio m-3">
+            <div name="aposta_segundo_jogo" *ngIf="baseService.apostou2">
+              APOSTA
+            </div>
+          </ion-row>
       </a>
 </div>

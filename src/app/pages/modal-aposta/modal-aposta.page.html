@@ -27,17 +27,14 @@
     </ion-row>
   </div>
   <div class="h-60">
-    <div class="h-10">
+    <div class="h-30">
       Saldo: <ion-label name="saldo">500$</ion-label>
     </div>
-    <div class="h-20">
-        Informações (<ion-label name="nome-time1">time1</ion-label>): <ion-label name="info-time1">DSUAHDUASDHUASHDUH</ion-label>
-    </div>
-    <div class="h-20">
-        Informações (<ion-label name="nome-time2">time2</ion-label>): <ion-label name="info-time2">DSUAHDUASDHUASHDUH</ion-label>
-    </div>
-    <div class="h-50">
-      <input autocomplete="off" type="text" aria-label="" placeholder="Aposta" class="w-50">
+    <div class="h-70">
+      <ion-label class="alinha-meio" [(ngModel)]="valorSaldo">
+        Aposta
+      </ion-label>
+      <ion-range color="success" max={{maximo}} step="1" min="1" pin="true" [(ngModel)]="valorAposta"></ion-range>
     </div>
   </div>
   <div class="h-20">

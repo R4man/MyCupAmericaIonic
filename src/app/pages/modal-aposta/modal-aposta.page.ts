@@ -8,12 +8,18 @@ import { ModalController } from '@ionic/angular';
 })
 export class ModalApostaPage implements OnInit {
 
+
+  maximo = 1000;
+  valorAposta: string;
+  valorSaldo: string;
   constructor(private ModalApostaController: ModalController) { }
+
 
   ngOnInit() {
   }
 
   apostar() {
+    console.log(this.valorAposta);
     this.ModalApostaController.dismiss();
   }
 
