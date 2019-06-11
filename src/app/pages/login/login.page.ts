@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BaseService } from 'src/app/base.service';
 import { ModalController, NavController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
+import { Usuario } from 'src/app/shared/classe.usuario';
 
 @Component({
   selector: 'app-login',
@@ -26,6 +27,12 @@ export class LoginPage implements OnInit {
     // tslint:disable-next-line: object-literal-key-quotes
     this.httpClient.post<any>(url, { 'nickname': this.login, 'senha': this.senha }).subscribe(
       (retorno: any) => {
+        const pessoas = retorno.pessoas;
+        const pessoaDict = pessoas;
+        const pessoa = new Usuario(pessoaDict.nickname,
+          pessoaDict.nome,
+          pessoaDict.saldo);
+        this.baseService.usuario = pessoa;
         this.nav.navigateForward('/data-jogos');
       }, (error: any) => {
         console.log('deu certo');
