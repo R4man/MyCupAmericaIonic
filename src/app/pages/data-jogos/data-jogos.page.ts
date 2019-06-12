@@ -23,8 +23,8 @@ export class DataJogosPage {
     // tslint:disable-next-line: align
     private modalapostaController: ModalController,
               private httpClient: HttpClient) { }
+              
 
-  }
   sel11img = '../assets/img/band150x150sigla/bra.png';
   sel12img = '../assets/img/band150x150sigla/bra.png';
   sel21img = '../assets/img/band150x150sigla/bra.png';
