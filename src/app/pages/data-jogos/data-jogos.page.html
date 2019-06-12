@@ -40,7 +40,7 @@
     </ion-row>
     <ion-row name="data-jogo" class="alinha-meio m-3">
       <div name="hora-local">
-          {{baseService.jogos[0].horario}} - {{baseService.jogos[0].estadio}} - {{baseService.jogos[0].local}}
+        {{baseService.jogos[0].horario}} - {{baseService.jogos[0].estadio}} - {{baseService.jogos[0].local}}
       </div>
     </ion-row>
     <ion-row name="aposta1" class="alinha-meio m-3">
@@ -74,5 +74,18 @@
       <ion-row name="aposta2" class="alinha-meio m-3">
       </ion-row>
     </a>
+  </div>
+  <div>
+    <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="arrow-dropup"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-fab-button><i class="fas fa-sign-out-alt"></i></ion-fab-button>
+        <ion-fab-button><i class="fas fa-flag"></i></ion-fab-button>
+        <ion-fab-button><i class="fas fa-users"></i></ion-fab-button>
+        <ion-fab-button><i class="fas fa-user"></i></ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
   </div>
 </div>
