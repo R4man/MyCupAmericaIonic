@@ -17,14 +17,13 @@
                 [(ngModel)]="cidade" />
             <input id="estado" name="estado" required="required" type="text" placeholder="Estado"
                 [(ngModel)]="estado" />
-            <input id="pais" name="pais" required="required" type="text" placeholder="País"
-                [(ngModel)]="pais" />
+            <input id="pais" name="pais" required="required" type="text" placeholder="País" [(ngModel)]="pais" />
         </div>
         <div class="borda-cinza">
             <input id="idade" name="idade" required="required" type="text" placeholder="Idade" [(ngModel)]="idade" />
         </div>
         <div class="borda-cinza">
-            <select [(ngModel)]="sexo" name="sexo" required="required" placeholder="Sexo" >
+            <select [(ngModel)]="sexo" name="sexo" required="required">
                 <option value="" disabled selected>Sexo</option>
                 <option value="Masculino">Masculino</option>
                 <option value="Feminino">Feminino</option>

@@ -1,21 +1,17 @@
-<body ng-app="starter">
-  <ion-pane ng-controller="ProfileCtrl">
-    <ion-header-bar class="bar-stable">
-      <h1 class="title">Perfil</h1>
-    </ion-header-bar>
-    <ion-content>
-      <div class="list card">
-        <ion-item class="profile-item">
-
-          <h2 class="profile-name dark">{{user.name}}</h2>
-          <div class="profile-info">{{user.info}}</div>
-        </ion-item>
-        <ion-item class="profile-item">
-          <button class="button button-block button-positive" ng-click="logIn()">
-            Login
-          </button>
-        </ion-item>
-      </div>
-    </ion-content>
-  </ion-pane>
-</body>
+<div class="alinha-centro">
+<div class="bar bar-header bar-positive">
+  <h1 class="alinha-centro">Perfil</h1>
+  <div class="alinha-centro">
+    <i class="fas fa-user"></i>
+  </div>
+  <div class="borda-cinza">
+    <p class="alinha-centro">Nickname:{{nick}}</p><!--ver se funciona sabosta-->
+  </div>
+  <div class="borda-cinza">
+    <p class="alinha-centro">Nome Completo:{{nome}}</p>
+  </div>
+  <div class="borda-cinza">
+    <p class="alinha-centro">Saldo:{{saldo}}</p>
+  </div>
+</div>
+</div>
