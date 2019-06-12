@@ -8,30 +8,19 @@
     <ion-toolbar class="cor-azul-forte">
       <ion-row class="m-0">
         <div class="w-20 h-100">
-           <div *ngIf="baseService.showMenuButton" class="w-20 h-100">
-            <a class="fas fa-bars">
-
-              <ion-menu menuId="menu">
-                <ion-list>
-                  <ion-button expand="" fill="clear" size="default" mode="md" routerLink="/perfil">Perfil</ion-button>
-                  <ion-button expand="" fill="clear" size="default" mode="md" routerLink="/login">Grupos</ion-button>
-                  <ion-button expand="" fill="clear" size="default" mode="md" routerLink="/login">Seleções</ion-button>
-                </ion-list>
-              </ion-menu>
-
-            </a>
+           <div *ngIf="baseService.showMenuButton" class="w-100 h-100">
           </div>
-          <div *ngIf="baseService.showBackButton" class="w-20 h-100">
-            <ion-button routerLink="/login" expand="full" fill="" mode="md" class="w-100 h-100">
-              <font color="white">
-                <i class="fas fa-chevron-circle-left"></i></font>
-            </ion-button>
-          </div>
+        </div>
+        <div *ngIf="baseService.showBackButton" class="w-20 h-100">
+          <ion-button routerLink="/login" expand="full" fill="" mode="md" class="w-100 h-100">
+            <font color="white">
+              <i class="fas fa-chevron-circle-left"></i></font>
+          </ion-button>
         </div>
         <div class="w-60 h-100">
           <ion-row>
             <div class="w-50p h-50p">
-              <ion-img class="h-50p w-50p m-0" src="../assets/img/logo.jpeg"></ion-img>
+              <ion-img class="h-50p w-50p m-0" src="../assets/img/logo5050.png"></ion-img>
             </div>
             <div class="">
               <h1 class="m-0 w-100 alinha-direita alinha-meio" id="header-title">My Cup América</h1>
