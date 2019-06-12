@@ -25,22 +25,37 @@ export class DataJogosPage {
               private httpClient: HttpClient) {
 
   }
-  sel11img = '../assets/img/band150x150sigla/' + this.baseService.jogos[this.baseService.qualjogo].sel1 + '.png';
-  sel12img = '../assets/img/band150x150sigla/' + this.baseService.jogos[this.baseService.qualjogo].sel2 + '.png';
-  sel21img = '../assets/img/band150x150sigla/' + this.baseService.jogos[this.baseService.qualjogo].sel1 + '.png';
-  sel22img = '../assets/img/band150x150sigla/' + this.baseService.jogos[this.baseService.qualjogo].sel2 + '.png';
+  sel11img = '../assets/img/band150x150sigla/bra.png';
+  sel12img = '../assets/img/band150x150sigla/bra.png';
+  sel21img = '../assets/img/band150x150sigla/bra.png';
+  sel22img = '../assets/img/band150x150sigla/bra.png';
 
   requisicao_jogos(variavel: Date) {
-    if (variavel === null) {
-      const mes = variavel.getMonth;
-      const dia = variavel.getDay;
+    if (variavel != null) {
+      let mes;
+      if (variavel.getMonth() + 1 < 10) {
+        mes = '0' + (variavel.getMonth() + 1);
+      } else {
+        mes = '' + variavel.getMonth() + 1;
+      }
+      let dia;
+      if (variavel.getDate() < 10) {
+        dia = '0' + variavel.getDate();
+      } else {
+        dia = '' + variavel.getDate();
+      }
       const dataCompleta = '2019-' + mes + '-' + dia;
-      if (this.dataJogos.indexOf(dataCompleta) != null) {
+      if (this.dataJogos.indexOf(dataCompleta) > -1) {
         this.dataSelecionada = dataCompleta;
       } else {
-        this.dataJogos[2].slice(0, 2);
+        if (+dia > 24) {
+          this.dataSelecionada = this.dataJogos[11];
+        } else if (+dia > 29) {
+          this.dataSelecionada = this.dataJogos[14];
+        } else if (+dia > 3 && +mes === 7) {
+          this.dataSelecionada = this.dataJogos[16];
+        }
       }
-      console.log(dia);
     }
     const url = this.baseService.baseURL + '/consultarJogos/';
     // tslint:disable-next-line: object-literal-key-quotes
@@ -120,8 +135,8 @@ export class DataJogosPage {
 
   ionViewDidEnter() {
     this.baseService.loading = false;
-    const hora = new Date();
-    this.requisicao_jogos(hora);
+    const date: Date = new Date();
+    this.requisicao_jogos(date);
   }
 
 }
