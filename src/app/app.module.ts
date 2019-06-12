@@ -23,4 +23,5 @@ import { ModalAvisoPage } from './pages/modal-aviso/modal-aviso.page';
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {}

@@ -4,11 +4,11 @@
       <div name="bandeira1" class="w-40">
         <ion-col>
           <div class="alinha-base">
-            <ion-img class="h-50p w-50p m-0" *ngIf="baseService.qualjogo === 1" src={{baseService.sel11img}}></ion-img>
-            <ion-img class="h-50p w-50p m-0" *ngIf="baseService.qualjogo === 2" src={{baseService.sel21img}}></ion-img>
+            <ion-img class="h-50p w-50p m-0" *ngIf="baseService.qualjogo === 1" src={{sel11img}}></ion-img>
+            <ion-img class="h-50p w-50p m-0" *ngIf="baseService.qualjogo === 2" src={{sel21img}}></ion-img>
           </div>
           <div class="alinha-topo p-2">
-            <input autocomplete="off" type="text" aria-label="" class="w-100">
+            <input [(ngModel)]="gols1" autocomplete="off" type="text" aria-label="" class="w-100">
           </div>
         </ion-col>
       </div>
@@ -18,11 +18,11 @@
       <div name="bandeira2" class="w-40">
         <ion-col>
           <div class="alinha-base">
-              <ion-img class="h-50p w-50p m-0" *ngIf="baseService.qualjogo === 1" src={{baseService.sel12img}}></ion-img>
-              <ion-img class="h-50p w-50p m-0" *ngIf="baseService.qualjogo === 2" src={{baseService.sel22img}}></ion-img>
+              <ion-img class="h-50p w-50p m-0" *ngIf="baseService.qualjogo === 1" src={{sel12img}}></ion-img>
+              <ion-img class="h-50p w-50p m-0" *ngIf="baseService.qualjogo === 2" src={{sel22img}}></ion-img>
           </div>
           <div class="alinha-topo p-2">
-            <input autocomplete="off" type="text" aria-label="" class="w-100">
+            <input [(ngModel)]="gols2" autocomplete="off" type="text" aria-label="" class="w-100">
           </div>
         </ion-col>
       </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { BaseService } from 'src/app/base.service';
 import { ModalAvisoPage } from '../modal-aviso/modal-aviso.page';
 import { ModalController, NavController } from '@ionic/angular';
@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './alzheimer.page.html',
   styleUrls: ['./alzheimer.page.scss'],
 })
-export class AlzheimerPage implements OnInit {
+export class AlzheimerPage {
 
   constructor(public baseService: BaseService,
     // tslint:disable-next-line: align
@@ -21,12 +21,10 @@ export class AlzheimerPage implements OnInit {
 
   email: string;
 
-  ngOnInit() {
-  }
-
   enviar(): boolean {
+
     let i = true;
-    const url = this.baseService.baseURL + '/cadastro/';
+    const url = this.baseService.baseURL + '/reset/';
     // tslint:disable-next-line: object-literal-key-quotes
     this.httpClient.post<any>(url, { 'email': this.email }).subscribe(
       (retorno: any) => {
