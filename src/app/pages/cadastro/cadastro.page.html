@@ -1,42 +1,46 @@
 <div style="overflow:scroll;overflow:auto" id="cadastro" class="alinha-meio">
     <form method="post" action="">
-        <h1>Cadastro</h1>
-        <div class="borda-cinza">
-            <input id="nome" name="nome" required="required" type="text" placeholder="Nome Completo"
-                [(ngModel)]="nome" />
+        <h1 style="padding:10px">Cadastro</h1>
+        <div>
+            <input class="container_signup" id="nome" name="nome" required="required" type="text"
+                placeholder="Nome Completo" [(ngModel)]="nome" />
         </div>
-        <div class="borda-cinza">
-            <input id="nick" name="nome" required="required" type="text" placeholder="Nickname"
+        <div>
+            <input class="container_signup" id="nick" name="nome" required="required" type="text" placeholder="Nickname"
                 [(ngModel)]="nickname" />
         </div>
-        <div class="borda-cinza">
-            <input id="email" name="email" required="required" type="text" placeholder="Email" [(ngModel)]="email" />
+        <div>
+            <input class="container_signup" id="email" name="email" required="required" type="text" placeholder="Email"
+                [(ngModel)]="email" />
         </div>
-        <div class="borda-cinza">
-            <input id="municipio" name="municipio" required="required" type="text" placeholder="Município"
-                [(ngModel)]="cidade" />
-            <input id="estado" name="estado" required="required" type="text" placeholder="Estado"
-                [(ngModel)]="estado" />
-            <input id="pais" name="pais" required="required" type="text" placeholder="País" [(ngModel)]="pais" />
+        <div>
+            <input class="container_signup" id="municipio" name="municipio" required="required" type="text"
+                placeholder="Município" [(ngModel)]="cidade" />
+            <input class="container_signup" id="estado" name="estado" required="required" type="text"
+                placeholder="Estado" [(ngModel)]="estado" />
+            <input class="container_signup" id="pais" name="pais" required="required" type="text" placeholder="País"
+                [(ngModel)]="pais" />
         </div>
-        <div class="borda-cinza">
-            <input id="idade" name="idade" required="required" type="text" placeholder="Idade" [(ngModel)]="idade" />
+        <div>
+            <input class="container_signup" id="idade" name="idade" required="required" type="text" placeholder="Idade"
+                [(ngModel)]="idade" />
         </div>
-        <div class="borda-cinza">
-            <select [(ngModel)]="sexo" name="sexo" required="required">
-                <option value="" disabled selected>Sexo</option>
+        <div>
+            <select class="container_signup" [(ngModel)]="sexo" name="sexo" required="required" placeholder="Sexo"
+                value="Masculino">
+                <option value="sexo" disabled selected>Sexo</option>
                 <option value="Masculino">Masculino</option>
                 <option value="Feminino">Feminino</option>
                 <option value="Outro">Outro</option>
             </select>
         </div>
-        <div class="borda-cinza">
-            <input id="senha" name="senha" required="required" type="password" placeholder="Senha"
-                [(ngModel)]="senha" />
+        <div>
+            <input class="container_signup" id="senha" name="senha" required="required" type="password"
+                placeholder="Senha" [(ngModel)]="senha" />
         </div>
-        <div class="borda-cinza">
-            <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="Confirmar Senha"
-                [(ngModel)]="senha2" />
+        <div>
+            <input class="container_signup" id="senha_cad" name="senha_cad" required="required" type="password"
+                placeholder="Confirmar Senha" [(ngModel)]="senha2" />
         </div>
         <div class="">
             <ion-button expand="block" fill="solid" color="light" mode="md" (click)='openModalAviso()'>Cadastrar
