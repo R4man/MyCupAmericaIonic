@@ -1,20 +1,43 @@
-<div class="w-100 h-50">
+<!-- <div class="w-100 h-50">
   <div class="h-33">
     <div class="alinha-base">
       <a class="fas fa-user m-3" style="font-size: 250%;"></a>
     </div>
-    <div class="alinha-base">
+    <h1 class="">
       Esqueceu a senha ou nickname?
-    </div>
-    <div class="alinha-topo">
+    </h1>
+    <span class="">
       Insira a informação abaixo para receber um e-mail de solicitação.
+    </span>
+  </div>
+  <input autocomplete="off" type="text" aria-label="" class="alinha-meio" placeholder="E-mail cadastrado" name="email"
+    [(ngModel)]="email">
+  <div class="h-33">
+    <ion-button expand="" fill="solid" size="default" mode="md" class="alinha-base m-3" (click)="openModalAviso()">
+      Enviar</ion-button>
+  </div>
+</div> -->
+
+<div>
+  <div style="text-align: center">
+    <a class="fas fa-user" style="font-size: 400%; margin: 30px 0 0 0"></a>
+  </div>
+  <div style="text-align: center">
+    <h1 class="">
+      Esqueceu a senha ou nickname?
+    </h1>
+  </div>
+  <div style="text-align: justify">
+    <div style="margin: 0px 20px">
+      <span>&nbsp;&nbsp;&nbsp;
+        Insira a informação abaixo para receber um e-mail de solicitação.
+      </span>
     </div>
   </div>
-  <div class="h-33 alinha-centro">
-    <input autocomplete="off" type="text" aria-label="" class="alinha-meio" placeholder="E-mail cadastrado" name="email"
+  <div style="text-align: center">
+    <input autocomplete="off" type="text" id="input_forget" placeholder="E-mail cadastrado" name="email"
       [(ngModel)]="email">
-  </div>
-  <div class="h-33">
-    <ion-button expand="" fill="solid" size="default" mode="md" class="alinha-base m-3" (click)="openModalAviso()">Enviar</ion-button>
+    <ion-button expand="" fill="solid" size="default" mode="md" class="alinha-base m-3" (click)="openModalAviso()">
+      Enviar</ion-button>
   </div>
 </div>
