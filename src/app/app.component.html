@@ -8,14 +8,12 @@
     <ion-toolbar class="cor-azul-forte">
       <ion-row class="m-0">
         <div class="w-20 h-100">
-           <div *ngIf="baseService.showMenuButton" class="w-100 h-100">
+          <div *ngIf="baseService.showBackButton" class="w-20 h-100">
+            <ion-button routerLink="/login" expand="full" fill="" mode="md" class="w-100 h-100">
+              <font color="white">
+                <i class="fas fa-chevron-circle-left"></i></font>
+            </ion-button>
           </div>
-        </div>
-        <div *ngIf="baseService.showBackButton" class="w-20 h-100">
-          <ion-button routerLink="/login" expand="full" fill="" mode="md" class="w-100 h-100">
-            <font color="white">
-              <i class="fas fa-chevron-circle-left"></i></font>
-          </ion-button>
         </div>
         <div class="w-60 h-100">
           <ion-row>
@@ -38,6 +36,19 @@
 
 
   <ion-content>
+    <div *ngIf="baseService.showMenuButton">
+      <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+        <ion-fab-button>
+          <ion-icon name="arrow-dropup"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="top">
+          <ion-fab-button routerLink="/login"><i class="fas fa-sign-out-alt"></i></ion-fab-button>
+          <ion-fab-button routerLink="/selecoes"><i class="fas fa-flag"></i></ion-fab-button>
+          <ion-fab-button routerLink="/grupos"><i class="fas fa-users"></i></ion-fab-button>
+          <ion-fab-button routerLink="/perfil"><i class="fas fa-user"></i></ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+    </div>
     <ion-router-outlet></ion-router-outlet>
   </ion-content>
 

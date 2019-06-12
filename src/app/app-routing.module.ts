@@ -10,8 +10,9 @@ const routes: Routes = [
   { path: 'modal-aviso', loadChildren: './pages/modal-aviso/modal-aviso.module#ModalAvisoPageModule' },
   { path: 'sobre', loadChildren: './pages/sobre/sobre.module#SobrePageModule' },
   { path: 'alzheimer', loadChildren: './pages/alzheimer/alzheimer.module#AlzheimerPageModule' },
-  { path: 'perfil', loadChildren: './pages/perfil/perfil.module#PerfilPageModule' },  { path: 'selecoes', loadChildren: './pages/selecoes/selecoes.module#SelecoesPageModule' }
-
+  { path: 'perfil', loadChildren: './pages/perfil/perfil.module#PerfilPageModule' },
+  { path: 'selecoes', loadChildren: './pages/selecoes/selecoes.module#SelecoesPageModule' },
+  { path: 'grupos', loadChildren: './pages/grupos/grupos.module#GruposPageModule' }
 
 
 ];
