@@ -1,17 +1,34 @@
-<div class="alinha-centro">
-<div class="bar bar-header bar-positive">
-  <h1 class="alinha-centro">Perfil</h1>
-  <div class="alinha-centro">
+<!-- <div class="alinha-centro">
+  <div class="bar bar-header bar-positive">
+    <div></div>
     <i class="fas fa-user"></i>
+    <h1 class="alinha-centro">Perfil</h1>
+    <div class="alinha-centro">
+      <i class="fas fa-user"></i>
+    </div>
+    <div class="borda-cinza">
+      <p class="alinha-centro">Nickname:{{this.baseService.usuario.nickname}}</p>
+    </div>
+    <div class="borda-cinza">
+      <p class="alinha-centro">Nome Completo:{{baseService.usuario.nome}}</p>
+    </div>
+    <div class="borda-cinza">
+      <p class="alinha-centro">Saldo:{{baseService.usuario.saldo}}</p>
+    </div>
   </div>
-  <div class="borda-cinza">
-    <p class="alinha-centro">Nickname:{{this.baseService.usuario.nickname}}</p><!--ver se funciona sabosta-->
+</div> -->
+
+<div>
+  <!-- HEADER -->
+  <div style="text-align:center">
+    <i class="fas fa-user" style="font-size: 300%; margin-top:5%"></i>
+    <h1>Perfil</h1>
   </div>
-  <div class="borda-cinza">
-    <p class="alinha-centro">Nome Completo:{{baseService.usuario.nome}}</p>
+
+  <!-- BODY -->
+  <div>
+    <p class="profile_field">Nickname:{{this.baseService.usuario.nickname}}</p>
+    <p class="profile_field">Nome Completo:{{baseService.usuario.nome}}</p>
+    <p class="profile_field">Saldo:{{baseService.usuario.saldo}}</p>
   </div>
-  <div class="borda-cinza">
-    <p class="alinha-centro">Saldo:{{baseService.usuario.saldo}}</p>
-  </div>
-</div>
 </div>

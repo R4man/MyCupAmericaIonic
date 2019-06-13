@@ -1,8 +1,9 @@
-p {
-    width: 90%;
-    padding: 10px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: groove;
-    background: #ffffff;
-  }
+.profile_field{
+  width: 70%;
+  background-color: lightgrey;
+  padding: 20px 10px;
+  margin: 5% 15%;
+  -webkit-box-shadow: 3px 0px 5px 0px lightgrey;
+  -moz-box-shadow: 3px 0px 5px 0px lightgrey;
+  box-shadow: 3px 0px 5px 0px lightgrey;
+}
