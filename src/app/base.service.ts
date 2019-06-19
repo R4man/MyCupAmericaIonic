@@ -11,7 +11,7 @@ export class BaseService {
     showMenuButton = false;
     showBackButton = false;
     aviso = 'null';
-    baseURL = 'web.farroupilha.ifrs.edu.br/paginas/~mycup/mobile/api/MyCup/mycup';
+    baseURL = 'https://web.farroupilha.ifrs.edu.br/mycupapi/';
     usuario: Usuario = null;
     jogos: DataJogo[] = null;
     jogo2existe = false;
